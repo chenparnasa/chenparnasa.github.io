@@ -778,3 +778,18 @@
 
     }
 
+    @media only screen and (max-width: 1288px){
+        .images{
+            margin-top: 50px;
+        }
+
+        .projects h1{
+            padding-top: 100px;
+        }
+
+        .projects h1::before{
+            margin-top: 60px;
+        }
+
+    }
+
