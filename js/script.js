@@ -1,16 +1,77 @@
-const spans = document.querySelectorAll('h1 span')
-spans.forEach(span => span.addEventListener('mouseover', function(e) {
-    span.classList.add('animated', 'rubberBand')
-}))
-spans.forEach(span => span.addEventListener('mouseout', function(e) {
-    span.classList.remove('animated', 'rubberBand')
-}))
+//---------------- Mouse Cursor ----------------//
+let mouseCursor = document.querySelector('.cursor');
+let navLinks = document.querySelectorAll('.nav-links li');
+let socialLinks = document.querySelectorAll('.social-links li');
+
+window.addEventListener('mousemove', cursor);
+
+function cursor(e){
+    mouseCursor.style.top = e.pageY + 'px';
+    mouseCursor.style.left = e.pageX + 'px';
+}
 
 
+navLinks.forEach((link)=>{
+    link.addEventListener('mouseleave', ()=>{
+        mouseCursor.classList.remove("link-grow");
+    });
+    link.addEventListener('mouseover', ()=>{
+        mouseCursor.classList.add("link-grow");
+    });
+});
+
+socialLinks.forEach((link)=>{
+    link.addEventListener('mouseleave', ()=>{
+        mouseCursor.classList.remove("link-grow");
+    });
+    link.addEventListener('mouseover', ()=>{
+        mouseCursor.classList.add("link-grow");
+    });
+});
+//---------------- Mouse Cursor ----------------//
+
+//---------------- Mobile Nav ----------------//
+const navSlide = () =>{
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
+
+    burger.addEventListener('click', ()=>{
+        //Toggle nav
+        nav.classList.toggle('nav-active');
+
+        //Animate links
+        navLinks.forEach((link, index)=>{
+            if(link.style.animation){
+                link.style.animation = ''
+            }
+            else{
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 1}s`;
+            }
+        });
+
+        //Burger animation
+        burger.classList.toggle('toggle');
+    });
+
+    burger.addEventListener('mouseleave', ()=>{
+        mouseCursor.classList.remove("link-grow");
+    });
+    burger.addEventListener('mouseover', ()=>{
+        mouseCursor.classList.add("link-grow");
+    });
+}
+
+navSlide();
+//---------------- Mobile Nav ----------------//
+
+//---------------- Skills Bars ----------------//
 const htmlBar = document.querySelector('.bar-html')
 const cssBar = document.querySelector('.bar-css')
 const jsBar = document.querySelector('.bar-javascript')
 const javaBar = document.querySelector('.bar-java')
+const psBar = document.querySelector('.bar-photoshop')
+const aiBar = document.querySelector('.bar-illustrator')
 
 var t1 = new TimelineLite()
 
@@ -18,6 +79,8 @@ t1.fromTo(htmlBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(90% - 6px)', ea
 .fromTo(cssBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(90% - 6px)', ease: Power4.easeOut})
 .fromTo(jsBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(80% - 6px)', ease: Power4.easeOut})
 .fromTo(javaBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(80% - 6px)', ease: Power4.easeOut})
+.fromTo(psBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(70% - 6px)', ease: Power4.easeOut})
+.fromTo(aiBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(60% - 6px)', ease: Power4.easeOut})
 
 const controller = new ScrollMagic.Controller()
 const scene = new ScrollMagic.Scene({
@@ -26,6 +89,8 @@ const scene = new ScrollMagic.Scene({
 })
 .setTween(t1)
 .addTo(controller)
+
+//---------------- Skills Bars ----------------//
 
 
 function togglePopup1(){
