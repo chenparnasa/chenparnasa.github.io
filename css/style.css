@@ -815,13 +815,60 @@ footer h1{
     }
 
     .projectsPage{
-        height: 140vh;
+        height: 180vh;
     }
     
     .images{
         grid-template-columns: 1fr;
         padding-top: 0;
     }
+
+    .popup .content{
+        top: 35%;
+        left: 35%;
+        width: 60%;
+        height: 75%;
+    }
+
+    .popup img{
+        width: 100%;
+    }
+
+    /*
+    .popup h4{
+    padding-top: 410px;
+    font-size: 20px;
+    font-weight: lighter;
+    font-family: 'Poppins', sans-serif;
+}
+
+.popup h5{
+    font-size: 13px;
+    color: tan;
+    font-family: 'Courgette', cursive;
+    letter-spacing: 1px;
+    font-weight: lighter;
+}
+
+.popup p{
+    font-size: 12px;
+    padding-top: 10px;
+    color: #252627;
+    font-family: 'Poppins', sans-serif;
+}
+
+.popup a{
+    color: #222222; 
+    margin-top: 7%;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    padding: 7px 20px;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    background-color: tan;
+    cursor: pointer;
+}
+    */
 }
 
 @media screen and (max-width:600px){
@@ -840,6 +887,10 @@ footer h1{
 
     .container{
         padding: 1rem 60px;
+    }
+
+    .projectsPage{
+        height: 140vh;
     }
 }
 
@@ -922,6 +973,23 @@ footer h1{
 
     .skillsPage{
         height: 85vh;
+    }
+
+    .projectsPage{
+        height: 80vh;
+    }
+
+    .title{
+        font-size: 0.5rem;
+    }
+    
+    .desc{
+        font-size: 0.4rem;
+    }
+    
+    .button{
+        font-size: 0.5rem;
+        padding: 5px 13px;
     }
 
 }
