@@ -1,7 +1,12 @@
 //---------------- Mouse Cursor ----------------//
 let mouseCursor = document.querySelector('.cursor');
 let navLinks = document.querySelectorAll('.nav-links li');
-let socialLinks = document.querySelectorAll('.social-links li');
+let scrollDown = document.querySelectorAll('.scroll-down');
+/*var cursor = document.querySelector(".cursor");
+var cursor2 = document.querySelector(".cursor2");
+document.addEventListener("mousemove", function(e){
+    cursor.style.cssText = cursor2.style.cssText = "left: " +e.clientX + "px; top: " + e.clientY +"px;";
+});*/
 
 window.addEventListener('mousemove', cursor);
 
@@ -10,6 +15,36 @@ function cursor(e){
     mouseCursor.style.left = e.pageX + 'px';
 }
 
+/*
+
+socialLinks.forEach((link)=>{
+    link.addEventListener('mouseleave', ()=>{
+        mouseCursor.classList.remove("link-grow");
+    });
+    link.addEventListener('mouseover', ()=>{
+        mouseCursor.classList.add("link-grow");
+    });
+});
+
+downloadCV.forEach((link)=>{
+    link.addEventListener('mouseleave', ()=>{
+        mouseCursor.classList.remove("link-grow");
+    });
+    link.addEventListener('mouseover', ()=>{
+        mouseCursor.classList.add("link-grow");
+    });
+});
+
+viewProject.forEach((link)=>{
+    link.addEventListener('mouseleave', ()=>{
+        mouseCursor.classList.remove("link-grow");
+    });
+    link.addEventListener('mouseover', ()=>{
+        mouseCursor.classList.add("link-grow");
+        
+    });
+});
+*/
 
 navLinks.forEach((link)=>{
     link.addEventListener('mouseleave', ()=>{
@@ -20,7 +55,7 @@ navLinks.forEach((link)=>{
     });
 });
 
-socialLinks.forEach((link)=>{
+scrollDown.forEach((link)=>{
     link.addEventListener('mouseleave', ()=>{
         mouseCursor.classList.remove("link-grow");
     });
@@ -28,8 +63,13 @@ socialLinks.forEach((link)=>{
         mouseCursor.classList.add("link-grow");
     });
 });
+
+
+
 //---------------- Mouse Cursor ----------------//
 
+
+/*
 //---------------- Mobile Nav ----------------//
 const navSlide = () =>{
     const burger = document.querySelector('.burger');
@@ -104,3 +144,4 @@ function togglePopup2(){
 function togglePopup3(){
     document.getElementById("popup-3").classList.toggle("active");
 }
+*/
