@@ -97,6 +97,7 @@
     width: 30px;
     height: 30px;
     margin-right: auto;
+    z-index: 1;
   }
 
   .nav-links{
@@ -117,23 +118,33 @@
     font-family: 'Poppins', sans-serif;
   }
 
- /* .download-cv{
-    margin-left: 20px;
-    font-size: 0.8rem;
-    background-color: #222222;
-    color: #fff;
-    border: none;
-    border-radius: 100px;
-    padding: 7px 20px;
-    font-family: 'Poppins', sans-serif;
+  #avaken-navbar{
+    background-color: #76AAB5;
+    cursor: auto;
   }
-  
-  .download-cv:hover{
-    background-color: #DCF763;
-    transition: all 0.3s ease 0s;
-    color: #222222;
+
+  #vistore-navbar{
+    background-color: #f0ca65;
+    cursor: auto;
+  }
+
+  #chameleon-navbar{
+    background-color: #f1f1f1;
+    cursor: auto;
+  }
+
+  #avaken-navbar .nav-links li a, #vistore-navbar .nav-links li a, #chameleon-navbar .nav-links li a{
     cursor: pointer;
-}*/
+  }
+
+  #avaken-navbar .nav-links li a:hover, #vistore-navbar .nav-links li a:hover{
+    color: white;
+  }
+
+  #chameleon-navbar .nav-links li a:hover{
+    color: rgb(160, 160, 160);
+  }
+
 
   .download-cv{
     font-size: 14px;
@@ -316,7 +327,7 @@
 }
 
 .headlines h1{
-      font-family: 'Blacker Sans Display Trial', sans-serif;
+      font-family: 'Lora', serif;
       text-align: center;
       font-style: normal;
       font-weight: 350;
@@ -340,6 +351,11 @@
 
 
 /*-----------------------------------------------------*/
+#project{
+  align-items: center;
+  width: 100%;
+}
+
 
 .projects{
   flex-direction: column;
@@ -353,6 +369,55 @@
   object-fit: cover;
 }
 
+.image{
+  display: inline-block;
+  text-align: center;
+}
+
+figure{
+  overflow: hidden;
+  margin: 0 10px 0 10px;
+}
+
+#zoom-in h3{
+  font-family:'Poppins', sans-serif;
+  color: #222222;
+  margin-top: 40px;
+  font-style: normal;
+  font-weight: 350;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+#zoom-in p{
+  padding: 0 10px;
+  font-family:'Poppins', sans-serif;
+  color: #bebebe;
+  font-size: 16px;
+}
+
+#zoom-in h3, p{
+  display:inline; 
+  vertical-align:middle;
+}
+
+.image img{
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.image #zoom-in img{
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+
+.image #zoom-in:hover img{
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
   .column{
     display: inline-block;
 
@@ -362,80 +427,83 @@
     display: flex;
     padding: 10px 196px 10px 195px;
   }
-
-
-  #project-1{
-    align-items: center;
-    width: 100%;
-  }
-
-  #project-2{
-    align-items: center;
-    width: 100%;
-    margin-right: 10px;
-  }
-
-  #project-3{
-    align-items: center;
-    width: 100%;
-    margin-left: 10px;
-  }
-
-  #project-4{
-    align-items: center;
-    width: 100%;
-  }
-
-
-  .image{
-    display: inline-block;
-    text-align: center;
-  }
-
-  figure{
-    overflow: hidden;
-    margin: 0 10px 0 10px;
-  }
-
-  #zoom-in h3{
+  
+  .row h1{
     font-family:'Poppins', sans-serif;
-    color: #222222;
-    margin-top: 40px;
     font-style: normal;
-    font-weight: 350;
+    font-weight:bold;
     font-size: 16px;
-    text-transform: uppercase;
+    line-height: 36px;
+    letter-spacing: 0.24em;
+    color: #222222;
+    padding-bottom: 8px;
   }
 
-  #zoom-in p{
-    padding: 0 10px;
+  .row p{
     font-family:'Poppins', sans-serif;
-    color: #bebebe;
+    font-style: normal;
+    font-weight: normal;
     font-size: 16px;
+    color: #8D8D8D;
+    letter-spacing: 0;
+    padding-bottom: 8px;
   }
 
-  #zoom-in h3, p{
-    display:inline; 
-    vertical-align:middle;
+  .the-idea{
+    float: right;
+    width: 50%;
+    padding-top: 120px;
   }
 
-  .image img{
-    display: block;
-    width: 100%;
-    height: auto;
-    cursor: pointer;
+  .original-screens{
+    padding-top: 120px;
+    padding-bottom: 80px;
+    display: inline-block;
+    
   }
 
-  .image #zoom-in img{
-    transform: scale(1);
-    transition: 0.3s ease-in-out;
+  .original-screens #text{
+    width: 50%;
+    float: left;
+    padding-right: 100px;
+    padding-top: 15%;
   }
 
-  .image #zoom-in:hover img{
-    transform: scale(1.1);
-    transition: 0.3s ease-in-out;
+  .original-screens img{
+    float: right;
+    width: 50%;
+  }
+
+  h1 span{
+    font-family: 'Lora', serif;
+    font-size: 36px;
+    letter-spacing: 0;
+    padding-right: 24px;
+  }
+
+  .for-desktop #text{
+    float: left;
+    width: 50%;
+    padding-top: 120px;
   }
   
+
+  .more h2{
+    font-family: 'Lora', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    letter-spacing: 0;
+    color: #222222;
+  }
+
+  .more{
+    padding-top: 120px;
+  }
+
+  .more .image{
+    padding-top: 50px;
+  }
 
   .chameleon{
     flex-direction: column;
@@ -443,17 +511,14 @@
     overflow: hidden;
   }
   
-  
-  .chameleon img{
-    z-index: -3;
-  }
-
-  #chameleon-1{
+  .chameleon #cover, .avaken #cover, .vistore #cover{
     align-items: center;
     width: 100%;
     height: 70vh;
     object-fit: cover; 
+    cursor: auto;
   }
+
 
   #chameleon-2{
     align-items: center;
@@ -462,201 +527,7 @@
   }
 
 
-
-  /*image fits to screen size in chameleon page
-.intro {
-  width: 100%;
-  height: auto;
-}
-
-.overview, .use_case, .how_it_works, .design{
-  align-items: center;
-  padding: 50px 196px 50px 195px;
-}
-
-.choose_a_model {
-  position:relative;
-}
-
-.gif{
-  position: absolute;
-  left: 195px;
-  top: 50px;
-}
-
-
-
-/*
-  .project-content{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5%;
-  }
-
-  .img_project1{
-    margin-right: 10%;
-    width: 60%;
-  }
-
-  .project-1 .description{
-      width: 30%;
-  }
-
-  .description{
-    padding-top: 2rem;
-  }
-
-  .description h2{
-    font-family:'Poppins', sans-serif;
-    font-size: 36px;
-    font-weight: bold;
-    color: #222222; 
-    padding-bottom: 4px;
-  }
-
-  .description h3{
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    color: #D16014; 
-    padding-bottom: .8rem;
-    font-weight: lighter;
-  }
-
-  .description p{
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.8rem;
-    color: #8E8E8E; 
-    padding-bottom: 2rem;
-  }
-
-  .view-project{
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.8rem;
-    font-weight: lighter;
-    background-color: #fff;
-    color: #222222;
-    border: 1px solid #222222;
-    border-radius: 100px;
-    padding: 7px 20px;
-  }
-
-  .view-project:hover{
-    background-color: #DCF763;
-    transition: all 0.3s ease 0s;
-    color: #222222;
-    cursor: pointer;
-    border: 1px solid #DCF763;
-  }
-
-
-  .view-project{
-    font-size: 14px;
-    color: #222222;
-    border: none;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bolder;
-    background-color: #fff;
-    text-transform: uppercase;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    border: none;
-    overflow: hidden;
-    outline: none;
-  }
-
-.view-project:hover{
-    transition: all 0.3s ease 0s;
-    color: #8287C9;
-    cursor: pointer;
-}
-
-  img{
-    z-index: -2;
-    max-width: 100%
-  }
-
-  .project-2{
-    height: 100vh;
-  }
-
-  .project-2 img{
-      padding-right: 5%;
-  }
-
-  .project-3{
-    height: 100vh;
-  }
-
-  .project-3 .description{
-    padding-right: 5%;
-  }
-
-  .project-4{
-    height: 100vh;
-  }
-
-  .project-4 img{
-    padding-right: 5%;
-}
-
-
-.about-contact{
-    width: 100%;
-    overflow: hidden;
-}
-
-.container{
-    height: 50vh;
-    background-color: #222222;
-    cursor: auto;
-    padding: 5%;
-    overflow-y: hidden;
-    display: flex;
-}
-
-.about-text,.knowledge {
-  cursor: auto;
-  width: 35%;
-  padding-right: 10%;
-}
-
-.contact{
-  cursor: auto;
-  width: 35%;
-}
-
-.about-text h2,.knowledge h2,.contact h2{
-  font-size: 28px;
-  text-transform: uppercase;
-  font-weight: normal;
-  font-family: 'Pathway Gothic One', sans-serif;
-  color: #fff;
-}
-
-.about-text h3 {
-  font-family: 'Poppins', sans-serif;
-  letter-spacing: 1px;
-  font-size: 0.8rem;
-  font-weight: lighter;
-  color: #DCF763;
-  padding-bottom: .5rem;
-}
-
-.about-text p{
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.8rem;
-  font-weight: lighter;
-  color: #bebebe;
-}
-
-.contact h3{
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.9rem;
-  font-weight: lighter;
-  color: #bebebe;
-  padding-top: 2rem;
-}*/
+  /*---------------------------------------*/
 
 
  footer{
