@@ -425,7 +425,7 @@ figure{
 
   .row{
     display: flex;
-    padding: 10px 196px 10px 195px;
+    padding: 1% 10% 1% 10%;
   }
   
   .row h1{
