@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chen Parnasa</title>
+    <title>Chen Parnasa - Portfolio</title>
     <link rel="icon" href="img/logo.svg">
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -11,7 +11,7 @@
     <link href="http://fonts.cdnfonts.com/css/blacker-sans-display-trial" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-    
+
     <!--icons CDN-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
 
@@ -32,8 +32,10 @@
 
         <nav>
             <ul class="nav-links">
-                <li><a class="download-cv" href="#projects">Email</a></li>
-                <li><a class="download-cv" href="#about-contact">Linkedin</a></li>
+                <p id="mail">chenparnasa@gmail.com</p>
+                <!--<button onclick="copyToClipboard('#p1')">Copy TEXT 1</button>-->
+                <li><a class="btn" onclick="copyToClipboard('#mail')">Email</a></li>
+                <li><a class="download-cv" href="https://www.linkedin.com/in/chenparnasa/" target="_blank">Linkedin</a></li>
                 <li><a class="download-cv" href="#about-contact">Download CV</a></li>
             </ul>
         </nav>
@@ -233,10 +235,6 @@
 
 
 
-
-
-
-
     <!--Link to JS files-->
     <script src="js/ScrollMagic.min.js"></script>
     <script src="js/animation.gsap.min.js"></script>
@@ -248,5 +246,9 @@
     <!--AOS-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
+
+    <!--Copy Email-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 </body>
 </html>
