@@ -27,19 +27,31 @@
     <div class="cursor2"></div>
 
     <!-----------------NAVBAR----------------->
-    <header id = "vistore-navbar">
+    <nav id = "vistore-navbar">
         <img class="logo" src="img/logo.svg">
 
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#projects">Email</a></li>
-                <li><a class="download-cv" href="https://www.linkedin.com/in/chen-parnasa-63b255198/" target="_blank">Linkedin</a></li>
-                <li><a href="#about-contact">Download CV</a></li>
-            </ul>
-        </nav>
+        <ul class="nav-links">
+            <div class="all-links">
+                <li><a href="chameleon">Chameleon</a></li>
+                <li><a href="avaken">Avaken</a></li>
+                <li><a href="vistore">Vistore</a></li>
+                <li><a href="#projects">Group Calendar</a></li>
+            </div>
 
-        <!--<button class="download-cv">Download CV</button>-->
-    </header>
+            <div class="links">
+                <li><a class="download-cv" href="file/Chen Parnasa - CV.pdf" target="_blank">Download CV</a></li>
+                <li><a class="linkedin" href="https://www.linkedin.com/in/chenparnasa/" target="_blank">Linkedin</a></li>
+                <li><a class="email" onclick="copyToClipboard('#mail')">Email</a></li>
+                <p id="mail">chenparnasa@gmail.com</p>
+            </div>
+        </ul>
+
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
 <!-----------------NAVBAR----------------->
 <!--
     <img class="intro" src="img/intro.png">
@@ -59,16 +71,33 @@
         <div class="column">
   
             <img src="img/vistore cover.jpg" data-aos="zoom-in" id="cover">
+            <img src="img/vistore cover tablet.jpg" data-aos="zoom-in" id="cover_tablet">
 
             <div class="row">
-                <img src="img/vistore details.png" data-aos="zoom-in" id="img_video">
+                <div class="project-details" data-aos="zoom-in">
+                    <div class="detail">
+                        <h6>CLIENT</h6>
+                        <h4>Vistore</h4>
+                    </div>
+                    <div class="detail">
+                        <h6>DESCRIPTION</h6>
+                        <h4>E-commerce App</h4>
+                    </div>
+                    <div class="detail">
+                        <h6>MY ROLE</h6>
+                        <h4>UI Design</h4>
+                    </div>
+                    <div class="detail">
+                        <h6>PLATFORMS</h6>
+                        <h4>Mobile & Desktop</h4>
+                    </div>
+                </div>
             </div>
 
             <div class="row">
                 <div class="the-idea" data-aos="zoom-in">
                     <h1>THE IDEA<h1>
                     <p>As part of this project, I analyzed and expanded an existing design language with an emphasis on color, typography, forms, iconography and effects.</p>
-                    <br>
                     <p>The next step was to use the existing design language for wireframes for a cross-platform E-commerce application.</p>
                 </div>
             </div>
@@ -104,8 +133,9 @@
                                     <figure>
                                         <a href="chameleon"><img src="img/chameleon cover.jpg"></a>
                                     </figure>
-                                    <h3>Chameleon</h3>
-                                    <p>Online sneakers design platform</p>
+                                    <div id="desc">
+                                        <h1><span>Chameleon</span>SNEAKERS DESIGN PLATFORM<h1>
+                                    </div>
                                 </div>
                             </div> 
 

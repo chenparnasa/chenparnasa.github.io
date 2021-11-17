@@ -1,7 +1,45 @@
+//---------------- Mobile Nav ----------------//
+const navSlide = () =>{
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
+
+    burger.addEventListener('click', ()=>{
+        //Toggle nav
+        nav.classList.toggle('nav-active');
+
+        //Animate links
+        navLinks.forEach((link, index)=>{
+            if(link.style.animation){
+                link.style.animation = ''
+            }
+            else{
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 1}s`;
+            }
+        });
+
+        //Burger animation
+        burger.classList.toggle('toggle');
+    });
+
+    burger.addEventListener('mouseleave', ()=>{
+        mouseCursor.classList.remove("link-grow");
+    });
+    burger.addEventListener('mouseover', ()=>{
+        mouseCursor.classList.add("link-grow");
+    });
+}
+
+navSlide();
+//---------------- Mobile Nav ----------------//
+
+
+
 //---------------- Mouse Cursor ----------------//
 let mouseCursor = document.querySelector('.cursor');
 let navLinks = document.querySelectorAll('.nav-links li');
 let scrollDown = document.querySelectorAll('.scroll-down');
+let creditLinks = document.querySelectorAll('.credits a');
 /*var cursor = document.querySelector(".cursor");
 var cursor2 = document.querySelector(".cursor2");
 document.addEventListener("mousemove", function(e){
@@ -56,6 +94,15 @@ navLinks.forEach((link)=>{
 });
 
 scrollDown.forEach((link)=>{
+    link.addEventListener('mouseleave', ()=>{
+        mouseCursor.classList.remove("link-grow");
+    });
+    link.addEventListener('mouseover', ()=>{
+        mouseCursor.classList.add("link-grow");
+    });
+});
+
+creditLinks.forEach((link)=>{
     link.addEventListener('mouseleave', ()=>{
         mouseCursor.classList.remove("link-grow");
     });
@@ -127,7 +174,7 @@ function copyToClipboard(element) {
   /* Alternate text for button */
   substituteText = 'Copied!';
   /* Grab our button */
-  btn = document.querySelector('.btn');
+  btn = document.querySelector('.email');
   
   /* Add a listener to the button instance so we can manipulate it */
   btn.addEventListener('click', function() {
@@ -137,45 +184,8 @@ function copyToClipboard(element) {
 
 
 
-   
-
 
 /*
-//---------------- Mobile Nav ----------------//
-const navSlide = () =>{
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-    const navLinks = document.querySelectorAll('.nav-links li');
-
-    burger.addEventListener('click', ()=>{
-        //Toggle nav
-        nav.classList.toggle('nav-active');
-
-        //Animate links
-        navLinks.forEach((link, index)=>{
-            if(link.style.animation){
-                link.style.animation = ''
-            }
-            else{
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 1}s`;
-            }
-        });
-
-        //Burger animation
-        burger.classList.toggle('toggle');
-    });
-
-    burger.addEventListener('mouseleave', ()=>{
-        mouseCursor.classList.remove("link-grow");
-    });
-    burger.addEventListener('mouseover', ()=>{
-        mouseCursor.classList.add("link-grow");
-    });
-}
-
-navSlide();
-//---------------- Mobile Nav ----------------//
-
 //---------------- Skills Bars ----------------//
 const htmlBar = document.querySelector('.bar-html')
 const cssBar = document.querySelector('.bar-css')

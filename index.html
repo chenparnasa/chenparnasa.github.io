@@ -11,6 +11,7 @@
     <link href="http://fonts.cdnfonts.com/css/blacker-sans-display-trial" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Martel:wght@900&display=swap" rel="stylesheet">
 
     <!--icons CDN-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
@@ -27,20 +28,47 @@
 
 
 <!-----------------NAVBAR------------------->
-    <header>
+    <!--<header>
         <img class="logo" src="img/logo.svg">
 
         <nav>
             <ul class="nav-links">
                 <p id="mail">chenparnasa@gmail.com</p>
-                <!--<button onclick="copyToClipboard('#p1')">Copy TEXT 1</button>-->
-                <li><a class="btn" onclick="copyToClipboard('#mail')">Email</a></li>
-                <li><a class="download-cv" href="https://www.linkedin.com/in/chenparnasa/" target="_blank">Linkedin</a></li>
-                <li><a class="download-cv" href="#about-contact">Download CV</a></li>
+                <li><a class="email" onclick="copyToClipboard('#mail')">Email</a></li>
+                <li><a class="linkedin" href="https://www.linkedin.com/in/chenparnasa/" target="_blank">Linkedin</a></li>
+                <li><a class="download-cv" href="file/Chen Parnasa - CV.pdf" target="_blank">Download CV</a></li>
             </ul>
+
         </nav>
 
-    </header>
+    </header>-->
+
+
+    <nav>
+        <img class="logo" src="img/logo.svg">
+
+        <ul class="nav-links">
+            <div class="all-links">
+                <li><a href="chameleon">Chameleon</a></li>
+                <li><a href="avaken">Avaken</a></li>
+                <li><a href="vistore">Vistore</a></li>
+                <li><a href="#projects">Group Calendar</a></li>
+            </div>
+
+            <div class="links">
+                <li><a class="download-cv" href="file/Chen Parnasa - CV.pdf" target="_blank">Download CV</a></li>
+                <li><a class="linkedin" href="https://www.linkedin.com/in/chenparnasa/" target="_blank">Linkedin</a></li>
+                <li><a class="email" onclick="copyToClipboard('#mail')">Email</a></li>
+                <p id="mail">chenparnasa@gmail.com</p>
+            </div>
+        </ul>
+
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
 <!------------------------------------------>
 
 <!------------------HOME------------------>
@@ -51,7 +79,7 @@
         <div class="mouse">
             <span></span>
         </div>
-        <h2>Scroll down to see what I can do</h2>
+        <h2>Selected Works</h2>
     </a>
 </div>
 <!--           
@@ -108,8 +136,9 @@
                     <figure>
                         <a href="chameleon"><img src="img/chameleon.jpg" id="project"></a>
                     </figure>
-                    <h3>Chameleon</h3>
-                    <p>Online sneakers design platform</p>
+                    <div id="desc">
+                        <h1><span>Chameleon</span>SNEAKERS DESIGN PLATFORM<h1>
+                    </div>
                 </div>
             </div> 
         </div>
@@ -121,8 +150,9 @@
                     <figure>
                         <a href="vistore"><img src="img/vistore.jpg" id="project"></a>
                     </figure>
-                    <h3>Vistore</h3>
-                    <p>Shopping app</p>
+                    <div id="desc">
+                        <h1><span>Vistore</span>SHOPPING APP<h1>
+                    </div>
                 </div>
             </div> 
 
@@ -131,8 +161,9 @@
                     <figure>
                         <a href="avaken"><img src="img/avaken.jpg" id="project"></a>
                     </figure>
-                    <h3>Avaken</h3>
-                    <p>Smarthome app</p>
+                    <div id="desc">
+                        <h1><span>Avaken</span>SMARTHOME APP<h1>
+                    </div>
                 </div>
             </div>  
         </div>
@@ -144,90 +175,18 @@
                     <figure>
                         <img src="img/66.jpg" id="project">
                     </figure>
-                    <h3>Group Calendar</h3>
-                    <p>Whatsapp feature</p>
+                    <div id="desc">
+                        <h1><span>Group Calendar</span>WHATSAPP FEATURE<h1>
+                    </div>
                 </div>
             </div> 
         </div>
     </div>
 </div>
 
-    <!--<div class="project-1">
-        <div class="project-content">
-            <img class = "img_project1" src="img/Design Screen open menu 1.png">
-            <div class="description">
-                <h2>Chameleon</h2>
-                <h3>UX/UI Design</h3>
-                <p>Chameleon is an online sneakers design platform that allows each user to create his own unique style.</p>
-                <a href="chameleon.html"><button class="view-project">View Project</button></a>
-            </div>
-            
-        </div>
-    </div>
-
-    <div class="project-2">
-        <div class="project-content">
-            <img src="img/Design Screen open menu 1.png">
-            <div class="description">
-                <h2>Shared Calendar for WhatsApp</h2>
-                <h3>UX/UI Design</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <button class="view-project">View Project</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-3">
-        <div class="project-content">
-            <img src="img/Design Screen open menu 1.png">
-            <div class="description">
-                <h2>Design Language Expansion</h2>
-                <h3>UI Design</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <button class="view-project">View Project</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-4">
-        <div class="project-content">
-            <img src="img/Design Screen open menu 1.png">
-            <div class="description">
-                <h2>Coming Soon</h2>
-                <h3>UI Design</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <button class="view-project">View Project</button>
-            </div>
-        </div>
-    </div>-->
-
 
 <!------------------PROJECTS------------------>
 
-<!------------------ABOUT&CONTACT
-<div class="about-contact" id="about-contact">
-    <div class="container">
-        <div class="about-text">
-            <h2>Chen Parnasa</h2>
-            <h3>Software Engineer & UX/Ui Designer</h3><br>
-            <p>I'm a design-minded, detail oriented, creative but yet logical person. <br><br>I have a B.Sc degree in Software Engineering and my passion to design brought me to learn also UX/UI.</p>
-        </div>
-
-        <div class="knowledge">
-            <h2>What I Know</h2>
-            <div class="images">
-
-            </div>
-        </div>
-
-        <div class="contact">
-            <h2>contact</h2>
-            <h3>chenparnasa@gmail.com</h3><br>
-        </div>
-    </div>
-</div>
-
------------------->
 
 <footer>
     <p>Designed & Developed by Chen Parnasa ©2021</p>

@@ -27,19 +27,31 @@
     <div class="cursor2"></div>
 
     <!-----------------NAVBAR----------------->
-    <header id = "avaken-navbar">
+    <nav id = "avaken-navbar">
         <img class="logo" src="img/logo.svg">
 
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#projects">Email</a></li>
-                <li><a class="download-cv" href="https://www.linkedin.com/in/chen-parnasa-63b255198/" target="_blank">Linkedin</a></li>
-                <li><a href="#about-contact">Download CV</a></li>
-            </ul>
-        </nav>
+        <ul class="nav-links">
+            <div class="all-links">
+                <li><a href="chameleon">Chameleon</a></li>
+                <li><a href="avaken">Avaken</a></li>
+                <li><a href="vistore">Vistore</a></li>
+                <li><a href="#projects">Group Calendar</a></li>
+            </div>
 
-        <!--<button class="download-cv">Download CV</button>-->
-    </header>
+            <div class="links">
+                <li><a class="download-cv" href="file/Chen Parnasa - CV.pdf" target="_blank">Download CV</a></li>
+                <li><a class="linkedin" href="https://www.linkedin.com/in/chenparnasa/" target="_blank">Linkedin</a></li>
+                <li><a class="email" onclick="copyToClipboard('#mail')">Email</a></li>
+                <p id="mail">chenparnasa@gmail.com</p>
+            </div>
+        </ul>
+
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
 <!-----------------NAVBAR----------------->
 <!--
     <img class="intro" src="img/intro.png">
@@ -59,16 +71,33 @@
         <div class="column">
   
             <img src="img/avaken cover.jpg" data-aos="zoom-in" id="cover">
+            <img src="img/avaken cover tablet.jpg" data-aos="zoom-in" id="cover_tablet">
 
             <div class="row">
-                <img src="img/avaken details.png" data-aos="zoom-in" id="img_video">
+                <div class="project-details" data-aos="zoom-in">
+                    <div class="detail">
+                        <h6>CLIENT</h6>
+                        <h4>Avaken</h4>
+                    </div>
+                    <div class="detail">
+                        <h6>DESCRIPTION</h6>
+                        <h4>Smarthome App</h4>
+                    </div>
+                    <div class="detail">
+                        <h6>MY ROLE</h6>
+                        <h4>UI Design</h4>
+                    </div>
+                    <div class="detail">
+                        <h6>PLATFORMS</h6>
+                        <h4>Tablet, Mobile & Desktop</h4>
+                    </div>
+                </div>
             </div>
    
             <div class="row">
-                <div class="the-idea" data-aos="zoom-in">
+                <div class="introduction" data-aos="zoom-in">
                     <h1>INTRODUCTION<h1>
                     <p>Avaken is a company that combines innovative solar energy technologies and smart home technology.</p>
-                    <br>
                     <p>Avaken's smarthome app is for private consumers who have installed solar panels on their roof and use some of the collected energy for home use.</p>
                 </div>
             </div>
@@ -81,10 +110,9 @@
 
 
             <div class="row">
-                <div class="the-idea" data-aos="zoom-in">
+                <div class="the-problem" data-aos="zoom-in">
                     <h1>THE PROBLEM<h1>
                     <p>The system enables operation and control of the smart home infrastructure and electrical products connected to it. Using the system, the user can monitor the balance of energy accumulated and utilized from the solar system.</p>
-                    <br>
                     <p>While designing the app's interface, it was important to note that its use was possible from anywhere at any time.</p>
                 </div>
             </div>
@@ -113,7 +141,6 @@
                 </div>
             </div>
             
-            
             <div class="row">
                 <div class="more" data-aos="zoom-in">
                     <h2>Check out more of my work<h2>
@@ -122,8 +149,9 @@
                                     <figure>
                                         <a href="vistore"><img src="img/vistore cover.jpg"></a>
                                     </figure>
-                                    <h3>Vistore</h3>
-                                    <p>Shopping app</p>
+                                    <div id="desc">
+                                        <h1><span>Vistore</span>SHOPPING APP<h1>
+                                    </div>
                                 </div>
                             </div> 
                 </div>
