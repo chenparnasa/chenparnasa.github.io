@@ -110,11 +110,10 @@
   cursor: pointer;
 }
 
-.links a:hover{
+/*.links a:hover{
   transition: all 0.2s ease 0s;
   color: #F95F51;
-}
-
+}*/
 
 .nav-links li{
   opacity: 0;
@@ -253,6 +252,11 @@
 
   #chameleon-navbar{
     background-color: #f1f1f1;
+    cursor: auto;
+  }
+
+  #group-calendar-navbar{
+    background-color: #D0CBC5;
     cursor: auto;
   }
 
@@ -517,7 +521,7 @@ figure{
 
 #desc span{
   font-family: 'Lora', serif;
-  color: #131530;
+  color: #222222;
   margin-top: 40px;
   font-style: normal;
   font-weight: bold;
@@ -528,7 +532,7 @@ figure{
 #desc h1{
   padding: 0 10px;
   font-family:'Poppins', sans-serif;
-  color: #131530;
+  color: #222222;
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 2px;
@@ -660,7 +664,7 @@ figure{
     padding-top: 50px;
   }
 
-  .chameleon{
+  .chameleon, .avaken, .vistore, .group-calendar{
     flex-direction: column;
     width: 100%;
     overflow: hidden;
@@ -696,7 +700,7 @@ figure{
     letter-spacing: 0;
   }
   
-  .chameleon #cover, .avaken #cover, .vistore #cover{
+  .chameleon #cover, .avaken #cover, .vistore #cover, .group-calendar #cover{
     align-items: center;
     width: 100%;
     height: 70vh;
@@ -716,6 +720,18 @@ figure{
     display: none;
   }
 
+  .group-calendar #cover_tablet{
+    display: none;
+  }
+
+
+  h5{
+    font-family: 'Poppins', sans-serif;
+    padding-top: 5%;
+    letter-spacing: 8px;
+    font-size: 48px;
+    text-align: center;
+  }
 
   #img_video{
     align-items: center;
@@ -851,6 +867,19 @@ figure{
   }
 
   .chameleon #cover_tablet{
+    display: block;
+    align-items: center;
+    width: 100%;
+    height: 110vh;
+    object-fit: cover; 
+    cursor: auto;
+  }
+
+  .group-calendar #cover{
+    display: none;
+  }
+
+  .group-calendar #cover_tablet{
     display: block;
     align-items: center;
     width: 100%;
