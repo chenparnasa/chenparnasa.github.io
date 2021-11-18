@@ -23,9 +23,9 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <div class="cursor"></div>
-<div class="cursor2"></div>
-<body>
 
+<body>
+<div class="site-wrapper">
 <!-----------------NAVBAR------------------->
     <!--<header>
         <img class="logo" src="img/logo.svg">
@@ -51,7 +51,7 @@
                 <li><a href="chameleon">Chameleon</a></li>
                 <li><a href="avaken">Avaken</a></li>
                 <li><a href="vistore">Vistore</a></li>
-                <li><a href="#projects">Group Calendar</a></li>
+                <li><a href="group_calendar">Group Calendar</a></li>
             </div>
 
             <div class="links">
@@ -71,83 +71,41 @@
 <!------------------------------------------>
 
 <!------------------HOME------------------>
-<div class="home">
-<div class="headlines">
-    <h1>Hi, I'm Chen Parnasa,<br>Software Engineer & UX/UI Designer.</h1>
-    <a href="#projects" class="scroll-down">
-        <div class="mouse">
-            <span></span>
-        </div>
-        <h2>Selected Works</h2>
-    </a>
-</div>
-<!--           
-    <div class="content">
-        <div class="wrapper">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	                    viewBox="0 0 534.38 276.56" style="enable-background:new 0 0 534.38 276.56;" xml:space="preserve">
-            <style type="text/css">
-	                    .st0{fill:#222222;stroke:#222222;stroke-width:3;stroke-miterlimit:10;}
-	                    .st1{fill:none;stroke:#1D1D1B;stroke-miterlimit:10;}
-            </style>
-            <path class="st0" d="M97.29,138c0,22.77,18.46,41.23,41.23,41.23c1.78,0,3.53-0.11,5.25-0.33l0.02,0.13l71.77-9.61l-47.6,90.38
-	                        h-0.01c-9.71,2.4-19.87,3.67-30.32,3.67c-69.79,0-126.36-56.57-126.36-126.36S67.84,10.75,137.63,10.75
-	                        c32.53,0,62.18,12.29,84.57,32.48l0.06,0.05l41.67,34.76L222.1,157l-54.15-47.87c-7.48-7.63-17.9-12.36-29.43-12.36
-	                        C115.75,96.77,97.29,115.23,97.29,138z"/>
-            <line class="st1" x1="352.51" y1="120.79" x2="352.36" y2="121.07"/>
-            <path class="st0" d="M516.71,137.11c0,69.79-56.57,126.36-126.36,126.36c-31.3,0-59.92-11.37-81.99-30.22l43.22-82.06h0.01
-	                        c5.76,15.84,20.94,27.15,38.76,27.15c22.77,0,41.23-18.46,41.23-41.23s-18.46-41.23-41.23-41.23c-17.08,0-31.73,10.38-37.99,25.19
-	                        l-0.01,0.02l-11.24,21.35l-5.76,10.93l-37.03,70.32l-0.25,0.47l-20.7,39.31H181.1l5.1-9.67l45.58-86.56l0.61-1.15l28.93-54.94
-	                        l12.91-24.51l1.54-2.93h0.02c20.13-43.1,63.85-72.96,114.56-72.96C460.14,10.75,516.71,67.32,516.71,137.11z"/>
-            <line class="st1" x1="143.79" y1="179.03" x2="142.33" y2="179.23"/>
-            </svg>
+    <div class="home">
+        <div class="headlines">
+            <h1>Hi, I'm Chen Parnasa,<br>Software Engineer & <span>UX/UI Designer.</span></h1>
+            <p>I'm a detail oriented person, passionate about design and logic, fascinated by
+                typography and love to create clean and elegant interfaces.</p>
+            <a href="#projects" class="scroll-down">
+                <div class="mouse">
+                    <span></span>
+                </div>
+                <h2>Scroll down to see my work</h2>
+            </a>
         </div>
 
-        <p class="line anim-typing">Software Engineer & UX/UI Designer</p>
     </div>
-
-    <div class="social-links">
-        <li><a href="mailto:chenparnasa@gmail.com" target="_top"><img src="img/logos_google-gmail.svg"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/chen-parnasa-63b255198/" target="_blank"><img src="img/logos_linkedin-icon.svg"></a></li>
-    </div>
-
-    <a href="#projects" class="scroll-down">
-        <div class="mouse">
-            <span></span>
-        </div>
-
-        <div class="text">
-            <span>Scroll Down</span>
-        </div>
-    </a>-->
-
-
-</div>
 </div>
 <!------------------HOME------------------>
 
 <!------------------PROJECTS------------------>
 <div class="projects" id="projects">
-    <div class="column">
-        <div class="row">
-            <div class="image">
-                <div id="zoom-in" data-aos="zoom-in">
+    <div class="grid">
+            <div class="image" id="chameleon" data-aos="zoom-in">
+                <div id="zoom-in">
                     <figure>
-                        <a href="chameleon"><img src="img/chameleon.jpg" id="project"></a>
+                        <a href="chameleon"><img src="img/chameleon.jpg"></a>
                     </figure>
                     <div id="desc">
                         <h1><span>Chameleon</span>SNEAKERS DESIGN PLATFORM<h1>
                     </div>
                 </div>
             </div> 
-        </div>
 
-
-        <div class="row">
             <div class="image" data-aos="zoom-in">
                 <div id="zoom-in">
                     <figure>
-                        <a href="vistore"><img src="img/vistore.jpg" id="project"></a>
+                        <a href="vistore"><img src="img/vistore.jpg"></a>
                     </figure>
                     <div id="desc">
                         <h1><span>Vistore</span>SHOPPING APP<h1>
@@ -158,28 +116,26 @@
             <div class="image" data-aos="zoom-in">
                 <div id="zoom-in">
                     <figure>
-                        <a href="avaken"><img src="img/avaken.jpg" id="project"></a>
+                        <a href="avaken"><img src="img/avaken.jpg"></a>
                     </figure>
                     <div id="desc">
                         <h1><span>Avaken</span>SMARTHOME APP<h1>
                     </div>
                 </div>
-            </div>  
-        </div>
+            </div> 
 
-
-        <div class="row">
             <div class="image" data-aos="zoom-in">
                 <div id="zoom-in">
                     <figure>
-                        <a href="group_calendar"><img src="img/group calendar.jpg" id="project"></a>
+                        <a href="group_calendar"><img src="img/group calendar.jpg"></a>
                     </figure>
                     <div id="desc">
                         <h1><span>Group Calendar</span>WHATSAPP FEATURE<h1>
                     </div>
                 </div>
             </div> 
-        </div>
+
+             
     </div>
 </div>
 
@@ -205,6 +161,5 @@
 
     <!--Copy Email-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
 </body>
 </html>

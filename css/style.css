@@ -7,10 +7,12 @@
   }
 
   html{
-      scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
   }
 
   body{
+    overflow-x: hidden;
     background: #ffffff;
   }
 
@@ -24,6 +26,11 @@
     background-color: #DCF763;    /* color of the scroll thumb */
     border-radius: 8px;       /* roundness of the scroll thumb */
     border: 1px solid #222222;  /* creates padding around scroll thumb */
+  }
+
+  .site-wrapper{
+    overflow-x: hidden;
+    position: relative;
   }
 
   /*-----------------------------------------------------*/
@@ -90,7 +97,7 @@
   width: auto;
   justify-content: space-around;
   position:absolute;
-  bottom: 5%;
+  bottom: 15%;
   right:25%;
   left:50%;
   margin-left:-150px;
@@ -145,7 +152,7 @@
 
 .home{
   width: 100%;
-  height: 55vh;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -246,17 +253,17 @@
   }
 
   #vistore-navbar{
-    background-color: #f0ca65;
+    background-color: #dedce3;
     cursor: auto;
   }
 
   #chameleon-navbar{
-    background-color: #f1f1f1;
+    background-color: #f8df9c;
     cursor: auto;
   }
 
   #group-calendar-navbar{
-    background-color: #D0CBC5;
+    background-color: #9dc4af;
     cursor: auto;
   }
 
@@ -466,8 +473,28 @@ a {
   font-style: normal;
   font-weight: 350;
   font-size: 36px;
-  margin-top: 5rem;
+  margin-top: 8rem;
   color: #131530;
+  padding: 0 3%;
+}
+
+.headlines h1 span{
+  font-family: 'Martel', serif;
+  color: #F95F51;
+  font-style: normal;
+  font-weight: 350;
+  font-size: 36px;
+}
+
+.headlines p{
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 16px;
+  margin-top: 2rem;
+  color: #131530;
+  padding: 0 25%;
 }
 
 
@@ -476,36 +503,40 @@ a {
     text-align: center;
     font-style: normal;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 25px;
-    letter-spacing: 0.02em;
     font-weight: lighter;
     margin-top: .5rem;
     color: #131530;
   }
 
-/*-----------------------------------------------------*/
-#project{
-  align-items: center;
-  width: 100%;
-}
+  .headlines a{
+    bottom: 15%;;
+  }
 
+/*-----------------------------------------------------*/
 
 .projects{
+  display: flex;
   flex-direction: column;
   width: 100%;
   overflow: hidden;
+  align-items: center;
 }
 
-
-.projects img{
-  z-index: -3;
-  object-fit: cover;
+.grid{
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-right: 10%;
+  padding-left: 10%;
+  grid-auto-flow: dense;
 }
 
 .image{
   display: inline-block;
   text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 figure{
@@ -558,7 +589,6 @@ figure{
 
   .column{
     display: inline-block;
-
   }
 
   .row{
@@ -770,12 +800,12 @@ figure{
 
 @media screen and (max-width:930px){
 
-  .home{
-      height: 65vh;
-  }
-
   .links{
     width: 55%;
+  }
+
+  .headlines p{
+    padding: 0 15%;
   }
 
   #text span{
@@ -798,16 +828,24 @@ figure{
 
 @media screen and (max-width:770px){
 
-  .home{
-      height: 60vh;
+  .cursor{
+    display: none;
   }
 
   .headlines h1{
     font-size: 30px;
   }
 
+  .headlines p{
+    padding: 0 10%;
+  }
+
   .links{
     width: 65%;
+  }
+
+  .grid{
+    grid-template-columns: auto;
   }
 
   #text span{
@@ -897,6 +935,10 @@ figure{
     font-size: 28px;
   }
 
+  .headlines h1 span{
+    font-size: 28px;
+  }
+
 
   .row{
       display: inline-block;
@@ -941,12 +983,18 @@ figure{
 
 @media screen and (max-width:520px){
 
-    .home{
-      height: 50vh;
-    }
-
     .headlines h1{
       font-size: 24px;
+      margin-top: 6rem;
+    }
+
+    .headlines h1 span{
+      font-size: 24px;
+    }
+
+    .headlines p{
+      font-size: 14px;
+      padding: 0 18%;
     }
 
     .scroll-down h2{
@@ -970,10 +1018,6 @@ figure{
   }
 
   @media screen and (max-width:470px){
-
-    .headlines h1{
-      font-size: 20px;
-    }
 
     .all-links a{
       font-size: 24px;
@@ -1003,7 +1047,15 @@ figure{
   @media screen and (max-width:400px){
 
     .headlines h1{
-      font-size: 18px;
+      font-size: 20px;
+    }
+
+    .headlines h1 span{
+      font-size: 20px;
+    }
+
+    .headlines p{
+      font-size: 13px;
     }
 
     .links{
@@ -1023,10 +1075,6 @@ figure{
   }
 
   @media screen and (max-width:350px){
-
-    .home{
-      height: 55vh;
-    }
 
     .all-links a{
       font-size: 20px;
