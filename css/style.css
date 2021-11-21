@@ -97,7 +97,7 @@
   width: auto;
   justify-content: space-around;
   position:absolute;
-  bottom: 15%;
+  bottom: 20%;
   right:25%;
   left:50%;
   margin-left:-150px;
@@ -139,7 +139,7 @@
 
 .all-links a:hover{
   transition: all 0.2s ease 0s;
-  color: #F95F51;
+  color: #F67E7D;
 }
 
 .burger{
@@ -480,7 +480,7 @@ a {
 
 .headlines h1 span{
   font-family: 'Martel', serif;
-  color: #F95F51;
+  color: #F67E7D;
   font-style: normal;
   font-weight: 350;
   font-size: 36px;
@@ -511,7 +511,7 @@ a {
   }
 
   .headlines a{
-    bottom: 15%;;
+    bottom: 20%;;
   }
 
 /*-----------------------------------------------------*/
@@ -694,7 +694,13 @@ figure{
     padding-top: 50px;
   }
 
-  .chameleon, .avaken, .vistore, .group-calendar{
+  /*.chameleon, .avaken, .vistore, .group-calendar{
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+  }*/
+
+  .cover-img{
     flex-direction: column;
     width: 100%;
     overflow: hidden;
@@ -730,7 +736,15 @@ figure{
     letter-spacing: 0;
   }
   
-  .chameleon #cover, .avaken #cover, .vistore #cover, .group-calendar #cover{
+  /*.chameleon #cover, .avaken #cover, .vistore #cover, .group-calendar #cover{
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    object-fit: cover; 
+    cursor: auto;
+  }*/
+  
+  .cover-img #cover{
     align-items: center;
     width: 100%;
     height: 70vh;
@@ -738,7 +752,11 @@ figure{
     cursor: auto;
   }
 
-  .vistore #cover_tablet{
+  .cover-img #cover_tablet{
+    display: none;
+  }
+
+  /*.vistore #cover_tablet{
     display: none;
   }
 
@@ -752,7 +770,7 @@ figure{
 
   .group-calendar #cover_tablet{
     display: none;
-  }
+  }*/
 
 
   h5{
@@ -874,7 +892,21 @@ figure{
     width: 100%;
   }
 
-  .vistore #cover{
+  .cover-img #cover{
+    display: none;
+  }
+
+  .cover-img #cover_tablet{
+    display: block;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; 
+    cursor: auto;
+  }
+
+  /*
+    .vistore #cover{
     display: none;
   }
 
@@ -912,7 +944,7 @@ figure{
     object-fit: cover; 
     cursor: auto;
   }
-
+  
   .group-calendar #cover{
     display: none;
   }
@@ -924,7 +956,7 @@ figure{
     height: 110vh;
     object-fit: cover; 
     cursor: auto;
-  }
+  }*/
 
 }
 

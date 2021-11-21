@@ -25,174 +25,168 @@
 </head>
 <div class="cursor"></div>
 
-    <!-----------------NAVBAR----------------->
-    <nav id = "group-calendar-navbar">
-        <img class="logo" src="img/logo.svg">
-
-        <ul class="nav-links">
-            <div class="all-links">
-                <li><a href="chameleon">Chameleon</a></li>
-                <li><a href="avaken">Avaken</a></li>
-                <li><a href="vistore">Vistore</a></li>
-                <li><a href="group_calendar">Group Calendar</a></li>
+<body>
+    <div class="site-wrapper">
+        <nav id = "group-calendar-navbar">
+            <img class="logo" src="img/logo.svg">
+    
+            <ul class="nav-links">
+                <div class="all-links">
+                    <li><a href="chameleon">Chameleon</a></li>
+                    <li><a href="avaken">Avaken</a></li>
+                    <li><a href="vistore">Vistore</a></li>
+                    <li><a href="group_calendar">Group Calendar</a></li>
+                </div>
+    
+                <div class="links">
+                    <li><a class="download-cv" href="file/Chen Parnasa - CV.pdf" target="_blank">Download CV</a></li>
+                    <li><a class="linkedin" href="https://www.linkedin.com/in/chenparnasa/" target="_blank">Linkedin</a></li>
+                    <li><a class="email" onclick="copyToClipboard('#mail')">Email</a></li>
+                    <p id="mail">chenparnasa@gmail.com</p>
+                </div>
+            </ul>
+    
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
             </div>
-
-            <div class="links">
-                <li><a class="download-cv" href="file/Chen Parnasa - CV.pdf" target="_blank">Download CV</a></li>
-                <li><a class="linkedin" href="https://www.linkedin.com/in/chenparnasa/" target="_blank">Linkedin</a></li>
-                <li><a class="email" onclick="copyToClipboard('#mail')">Email</a></li>
-                <p id="mail">chenparnasa@gmail.com</p>
-            </div>
-        </ul>
-
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-    </nav>
-<!-----------------NAVBAR----------------->
-<!--
-    <img class="intro" src="img/intro.png">
-    <img class="overview" src="img/overview.png">
-    <img class="use_case" src="img/use case.png">
-
-    <div class="choose_a_model">
-        <img class="how_it_works" src="img/how it works.png">
-        <img class="gif" src="img/sneakers-gif.gif">
-    </div>
-
-    <img class="design" src="img/DESIGN.png">
--->
-
-
-    <div class="group-calendar">
-        <div class="column">
-  
+        </nav>
+    
+        <div class="cover-img">
             <img src="img/group calendar cover.jpg" data-aos="zoom-in" id="cover">
             <img src="img/group calendar.jpg" data-aos="zoom-in" id="cover_tablet">
-
-            <div class="row">
-                <div class="project-details" data-aos="zoom-in">
-                    <div class="detail">
-                        <h6>CLIENT</h6>
-                        <h4>Whatsapp</h4>
-                    </div>
-                    <div class="detail">
-                        <h6>DESCRIPTION</h6>
-                        <h4>Group Calendar</h4>
-                    </div>
-                    <div class="detail">
-                        <h6>MY ROLE</h6>
-                        <h4>UX/UI Design</h4>
-                    </div>
-                    <div class="detail">
-                        <h6>PLATFORMS</h6>
-                        <h4>Mobile</h4>
-                    </div>
-                </div>
-            </div>
-
-            <h5 data-aos="zoom-in">COMING SOON</h5>
-            <!--<div class="row">
-                <div class="introduction" data-aos="zoom-in">
-                    <h1>INTRODUCTION<h1>
-                    <p>Chameleon is an online sneakers E-commerce platform that allows users to design sneakers and create their own unique style.</p>
-                    <p>Users can choose from a variety of models that can serve as a canvas for ideas. Chameleon also offers designed examples that can be purchased, used as inspiration or as a starting point for designing.</p>
-                </div>
-            </div>
-
-            <div class="videowrapper">
-                <video autoplay controls>
-                    <source src="video/select a model flow (2).mp4" type="video/mp4">
-                </video>
-            </div>
-
-            <div class="row">
-                <div class="the-problem" data-aos="zoom-in">
-                    <h1>THE PROBLEM<h1>
-                    <p>Personalization is a gift. When someone gives you a gift that is specially tailored for you, you will probably feel that it is more special than the others because it can only be yours.</p>
-                    <p>These days, people like to stand out. In my user interviews, I found that consumers are quite aware of their wants and needs, and they are not always satisfied with the products available in the market.</p>
-                </div>
-            </div>
-
-            <img src="img/chameleon wireframes.png" data-aos="zoom-in" id="img_video">
-
-            <div class="videowrapper">
-                <video autoplay controls>
-                    <source src="video/design flow (2).mp4" type="video/mp4">
-                </video>
-            </div>
-
-            <div class="row">
-                <div class="for-desktop" data-aos="zoom-in">
-                    <div id="text">
-                        <h1><span>Chameleon</span>USER'S PROFILE<h1>
-                        <p>Users can find saved designs, uploads, and likes in their profiles.</p>
-                        <p>Additionally, Chameleon provides its users a dashboard with customized information for them, such as the number of points they have earned on purchases and views of their designs (which they can use in the next purchase), and popular designs that can be purchased or used as inspiration.</p>
-                    </div>
-                    <img src="img/chameleon user's profile.png" id="img_video">
-                </div>
-            </div>
-
-            <div class="videowrapper">
-                <video autoplay controls>
-                    <source src="video/purchase flow (2).mp4" type="video/mp4">
-                </video>
-            </div>
-
-            <img src="img/chameleon screens.jpg" data-aos="zoom-in" id="img_video">
-
-            <div class="row">
-                <div class="credits" data-aos="zoom-in">
-                    <h1>THANKS & CREDITS<h1>
-                    <a href="https://www.behance.net/gallery/91815081/Sneakers-Mockup-Free-download-(PSD)">Classic Leather 95 Mockup</a>
-                    <br>
-                    <a href="https://www.behance.net/gallery/32736673/FREE-PSD-Mockup-Adidas-Superstar?tracking_source=search_projects_recommended%7Csneakers%20mockup">Adidas Mockup</a>
-                    <br>
-                    <a href="https://www.behance.net/gallery/84176815/NIKE-Airmax-90-FREE-PSD-MOCKUP?tracking_source=search_projects_recommended%7Csneakers%20mockup">Nike Mockup</a>
-                </div>
-            </div>-->
-
-            <div class="row">
-                <div class="more" data-aos="zoom-in">
-                    <h2>Check out more of my work<h2>
-                            <div class="image" data-aos="zoom-in">
-                                <div id="zoom-in">
-                                    <figure>
-                                        <a href="avaken"><img src="img/avaken cover.jpg"></a>
-                                    </figure>
-                                    <div id="desc">
-                                        <h1><span>Avaken</span>SMARTHOME APP<h1>
-                                    </div>
-                                </div>
-                            </div> 
-                </div>
-            </div>
-   
-            
         </div>
     </div>
+    
+    
+        <div class="group-calendar">
+            <div class="column">
+    
+                <div class="row">
+                    <div class="project-details" data-aos="zoom-in">
+                        <div class="detail">
+                            <h6>CLIENT</h6>
+                            <h4>Whatsapp</h4>
+                        </div>
+                        <div class="detail">
+                            <h6>DESCRIPTION</h6>
+                            <h4>Group Calendar</h4>
+                        </div>
+                        <div class="detail">
+                            <h6>MY ROLE</h6>
+                            <h4>UX/UI Design</h4>
+                        </div>
+                        <div class="detail">
+                            <h6>PLATFORMS</h6>
+                            <h4>Mobile</h4>
+                        </div>
+                    </div>
+                </div>
+    
+                <h5 data-aos="zoom-in">COMING SOON</h5>
+                <!--<div class="row">
+                    <div class="introduction" data-aos="zoom-in">
+                        <h1>INTRODUCTION<h1>
+                        <p>Chameleon is an online sneakers E-commerce platform that allows users to design sneakers and create their own unique style.</p>
+                        <p>Users can choose from a variety of models that can serve as a canvas for ideas. Chameleon also offers designed examples that can be purchased, used as inspiration or as a starting point for designing.</p>
+                    </div>
+                </div>
+    
+                <div class="videowrapper">
+                    <video autoplay controls>
+                        <source src="video/select a model flow (2).mp4" type="video/mp4">
+                    </video>
+                </div>
+    
+                <div class="row">
+                    <div class="the-problem" data-aos="zoom-in">
+                        <h1>THE PROBLEM<h1>
+                        <p>Personalization is a gift. When someone gives you a gift that is specially tailored for you, you will probably feel that it is more special than the others because it can only be yours.</p>
+                        <p>These days, people like to stand out. In my user interviews, I found that consumers are quite aware of their wants and needs, and they are not always satisfied with the products available in the market.</p>
+                    </div>
+                </div>
+    
+                <img src="img/chameleon wireframes.png" data-aos="zoom-in" id="img_video">
+    
+                <div class="videowrapper">
+                    <video autoplay controls>
+                        <source src="video/design flow (2).mp4" type="video/mp4">
+                    </video>
+                </div>
+    
+                <div class="row">
+                    <div class="for-desktop" data-aos="zoom-in">
+                        <div id="text">
+                            <h1><span>Chameleon</span>USER'S PROFILE<h1>
+                            <p>Users can find saved designs, uploads, and likes in their profiles.</p>
+                            <p>Additionally, Chameleon provides its users a dashboard with customized information for them, such as the number of points they have earned on purchases and views of their designs (which they can use in the next purchase), and popular designs that can be purchased or used as inspiration.</p>
+                        </div>
+                        <img src="img/chameleon user's profile.png" id="img_video">
+                    </div>
+                </div>
+    
+                <div class="videowrapper">
+                    <video autoplay controls>
+                        <source src="video/purchase flow (2).mp4" type="video/mp4">
+                    </video>
+                </div>
+    
+                <img src="img/chameleon screens.jpg" data-aos="zoom-in" id="img_video">
+    
+                <div class="row">
+                    <div class="credits" data-aos="zoom-in">
+                        <h1>THANKS & CREDITS<h1>
+                        <a href="https://www.behance.net/gallery/91815081/Sneakers-Mockup-Free-download-(PSD)">Classic Leather 95 Mockup</a>
+                        <br>
+                        <a href="https://www.behance.net/gallery/32736673/FREE-PSD-Mockup-Adidas-Superstar?tracking_source=search_projects_recommended%7Csneakers%20mockup">Adidas Mockup</a>
+                        <br>
+                        <a href="https://www.behance.net/gallery/84176815/NIKE-Airmax-90-FREE-PSD-MOCKUP?tracking_source=search_projects_recommended%7Csneakers%20mockup">Nike Mockup</a>
+                    </div>
+                </div>-->
+    
+                <div class="row">
+                    <div class="more" data-aos="zoom-in">
+                        <h2>Check out more of my work<h2>
+                                <div class="image" data-aos="zoom-in">
+                                    <div id="zoom-in">
+                                        <figure>
+                                            <a href="avaken"><img src="img/avaken cover.jpg"></a>
+                                        </figure>
+                                        <div id="desc">
+                                            <h1><span>Avaken</span>SMARTHOME APP<h1>
+                                        </div>
+                                    </div>
+                                </div> 
+                    </div>
+                </div>
+       
+                
+            </div>
+        </div>
+    
+    <!---------------------------------------->
+    
+    <footer>
+        <p>Designed & Developed by Chen Parnasa ©2021</p>
+    </footer>
+    
+    <!---------------------------------------->
+    
+    
+        <!--Link to JS files-->
+        <script src="js/ScrollMagic.min.js"></script>
+        <script src="js/animation.gsap.min.js"></script>
+        <script src="js/TimelineLite.min.js"></script>
+        <script src="js/TweenMax.min.js"></script>
+        <script src="js/CSSPlugin.min.js"></script>
+        <script src="js/script.js"></script>
+    
+        <!--AOS-->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>AOS.init();</script>
 
-<!---------------------------------------->
-
-<footer>
-    <p>Designed & Developed by Chen Parnasa ©2021</p>
-</footer>
-
-<!---------------------------------------->
-
-
-    <!--Link to JS files-->
-    <script src="js/ScrollMagic.min.js"></script>
-    <script src="js/animation.gsap.min.js"></script>
-    <script src="js/TimelineLite.min.js"></script>
-    <script src="js/TweenMax.min.js"></script>
-    <script src="js/CSSPlugin.min.js"></script>
-    <script src="js/script.js"></script>
-
-    <!--AOS-->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
-
+        <!--Copy Email-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</body>
 </html>

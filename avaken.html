@@ -22,55 +22,44 @@
     <!--Link to CSS files-->
     <link rel="stylesheet" href="css/style.css" />
 </head>
+<div class="cursor"></div>
 
-    <div class="cursor"></div>
-    <!-----------------NAVBAR----------------->
-    <nav id = "avaken-navbar">
-        <img class="logo" src="img/logo.svg">
+<body>
+    <div class="site-wrapper">
+        <nav id = "avaken-navbar">
+            <img class="logo" src="img/logo.svg">
 
-        <ul class="nav-links">
-            <div class="all-links">
-                <li><a href="chameleon">Chameleon</a></li>
-                <li><a href="avaken">Avaken</a></li>
-                <li><a href="vistore">Vistore</a></li>
-                <li><a href="group_calendar">Group Calendar</a></li>
+            <ul class="nav-links">
+                <div class="all-links">
+                    <li><a href="chameleon">Chameleon</a></li>
+                    <li><a href="avaken">Avaken</a></li>
+                    <li><a href="vistore">Vistore</a></li>
+                    <li><a href="group_calendar">Group Calendar</a></li>
+                </div>
+
+                <div class="links">
+                    <li><a class="download-cv" href="file/Chen Parnasa - CV.pdf" target="_blank">Download CV</a></li>
+                    <li><a class="linkedin" href="https://www.linkedin.com/in/chenparnasa/" target="_blank">Linkedin</a></li>
+                    <li><a class="email" onclick="copyToClipboard('#mail')">Email</a></li>
+                    <p id="mail">chenparnasa@gmail.com</p>
+                </div>
+            </ul>
+
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
             </div>
+        </nav>
 
-            <div class="links">
-                <li><a class="download-cv" href="file/Chen Parnasa - CV.pdf" target="_blank">Download CV</a></li>
-                <li><a class="linkedin" href="https://www.linkedin.com/in/chenparnasa/" target="_blank">Linkedin</a></li>
-                <li><a class="email" onclick="copyToClipboard('#mail')">Email</a></li>
-                <p id="mail">chenparnasa@gmail.com</p>
-            </div>
-        </ul>
-
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+        <div class="cover-img">
+            <img src="img/avaken cover.jpg" data-aos="zoom-in" id="cover">
+            <img src="img/avaken.jpg" data-aos="zoom-in" id="cover_tablet">
         </div>
-    </nav>
-<!-----------------NAVBAR----------------->
-<!--
-    <img class="intro" src="img/intro.png">
-    <img class="overview" src="img/overview.png">
-    <img class="use_case" src="img/use case.png">
-
-    <div class="choose_a_model">
-        <img class="how_it_works" src="img/how it works.png">
-        <img class="gif" src="img/sneakers-gif.gif">
     </div>
-
-    <img class="design" src="img/DESIGN.png">
--->
-
 
     <div class="avaken">
         <div class="column">
-  
-            <img src="img/avaken cover.jpg" data-aos="zoom-in" id="cover">
-            <img src="img/avaken.jpg" data-aos="zoom-in" id="cover_tablet">
-
             <div class="row">
                 <div class="project-details" data-aos="zoom-in">
                     <div class="detail">
@@ -178,4 +167,8 @@
     <!--AOS-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
+
+    <!--Copy Email-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>    
+</body>
 </html>
