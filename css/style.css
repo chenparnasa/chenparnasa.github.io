@@ -88,7 +88,7 @@
 
 .all-links{
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%,-50%);
   text-align: center;
@@ -250,14 +250,7 @@ a {
         animation-delay: 6s;
         cursor: pointer;
     }
-/*
-    .text span{
-        color: #bebebe;
-        font-weight: lighter;
-        font-size: 0.7rem;
-        font-family: 'Poppins', sans-serif;
-        letter-spacing: .5px;
-    }*/
+
 
     @keyframes move-wheel{
         0%{
@@ -416,7 +409,7 @@ figure{
 .text-wrapper{
   width: 40%;
   position: relative;
-  margin-top: -40%;
+  top: -90%;
   padding-left: 5%;
   color: #ffffff;
 }
@@ -751,7 +744,6 @@ figure{
   }
 
   .text-wrapper{
-    margin-top: -50%;
     width: 50%;
   }
 
@@ -827,7 +819,7 @@ figure{
   }
 
   .text-wrapper{
-    margin-top: -70%;
+    width: 60%;
   }
 
   /*
@@ -920,15 +912,24 @@ figure{
     padding-right: 0;
   }
 
+  .smartphoneWrapper {
+    width: 100%;
+}
+
   .original-screens img, .problem-with-img img{
     width: 100%;
   }
 
   .smartphoneWrapper video{
-    width: 100%;
+    width: 90%;
+    float: none;
+    padding-right: 0;
+    margin: auto;
   }
   .smartphoneWrapper img{
-    width: 100%;
+    width: 90%;
+    float: none;
+    margin: auto;
   }
 
   .for-desktop #text{
@@ -940,8 +941,7 @@ figure{
   }
 
   .text-wrapper{
-    margin-top: -80%;
-    width: 60%;
+    width: 65%;
   }
 
   
@@ -983,7 +983,6 @@ figure{
     }
 
     .text-wrapper{
-      margin-top: -100%;
       width: 80%;
     }
   
@@ -1013,10 +1012,6 @@ figure{
 
     .credits a {
       font-size: 14px;
-    }
-
-    .text-wrapper{
-      margin-top: -110%;
     }
     
     .text-wrapper h3{
@@ -1056,7 +1051,6 @@ figure{
     }
 
     .text-wrapper{
-      margin-top: -130%;
       width: 90%;
     }
     
@@ -1090,7 +1084,6 @@ figure{
     }
 
     .text-wrapper{
-      margin-top: -150%;
       width: 95%;
     }
 
