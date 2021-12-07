@@ -58,13 +58,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #EFEFEF;
+    background-color: #1D1E2C;
 }
 
 .burger div{
     width: 25px;
     height: 3px;
-    background-color: #131530;
+    background-color: #EFEFEF;
     margin: 5px;
     transition: all 0.3s ease;  
 }
@@ -75,7 +75,7 @@
   right: 0px;
   height: 100%;
   top: 0px;
-  background-color: #EFEFEF;
+  background-color: #2D2F42;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,11 +103,6 @@
   right:25%;
   left:50%;
   margin-left:-150px;
-  text-align: center;
-  font-size: 14px;
-  color: #131530;
-  font-family: 'Poppins', sans-serif;
-  font-weight: bolder;
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
@@ -117,6 +112,11 @@
 
 .links a{
   cursor: pointer;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal;
 }
 
 /*.links a:hover{
@@ -129,7 +129,7 @@
   margin-bottom: 5%;
 }
 
-.all-links a{
+/* .all-links a{
   color: #131530;
   text-decoration: none;
   letter-spacing: 1px;
@@ -137,11 +137,32 @@
   font-weight: lighter;
   font-family: 'Lora', serif;
   cursor: pointer;
-}
+} 
 
 .all-links a:hover{
   transition: all 0.2s ease 0s;
   color: #F67E7D;
+}*/
+
+.all-links a{
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-family: 'Martel', serif;
+  text-align: center;
+  font-style: normal;
+  font-weight: 350;
+  font-size: 72px;
+  color: #ffffff;
+  -webkit-text-stroke: 1px #ffffff;
+  -webkit-text-fill-color: transparent;
+}
+
+.all-links a:hover{
+  transition: all 0.3s ease;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-text-stroke: unset;
 }
 
 .burger{
@@ -156,14 +177,23 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-color: #EFEFEF;
+  background-color: #1D1E2C;
 }
 
-.logo{
+/* .logo{
   width: 30px;
   height: 30px;
   margin-right: auto;
   z-index: 3;
+} */
+
+.logo{
+  margin-right: auto;
+  color: #ffffff;
+  font-size: 18px;
+  font-family: 'Satisfy', cursive;
+  font-weight: normal;
+  opacity: 35%;
 }
 
   .link-grow{
@@ -232,7 +262,7 @@ a {
     .mouse{
         width: 1.5rem;
         height: 2.5rem;
-        border: 2px solid #131530;
+        border: 2px solid #ffffff;
         border-radius: 2rem;
         display: flex;
         margin-top: 3rem;
@@ -242,7 +272,7 @@ a {
     .mouse span{
         width: .15rem;
         height: .5rem;
-        background-color: #131530;
+        background-color: #ffffff;
         display: block;
         border-radius: 2px;
         margin: auto;
@@ -267,7 +297,7 @@ a {
   align-items: center;
 }
 
-.headlines h1{
+/* .headlines h1{
   font-family: 'Martel', serif;
   text-align: center;
   font-style: normal;
@@ -276,6 +306,168 @@ a {
   margin-top: 8rem;
   color: #131530;
   padding: 0 3%;
+} */
+
+#entry{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fill 0.5s ease forwards 6s;
+  width: 100%;
+}
+
+#entry path:nth-child(1){
+  stroke-dasharray: 434;
+  stroke-dashoffset: 434;
+  animation: line-anim 2s ease forwards;
+}
+#entry path:nth-child(2){
+  stroke-dasharray: 488;
+  stroke-dashoffset: 488;
+  animation: line-anim 2s ease forwards 0.2s;
+}
+#entry path:nth-child(3){
+  stroke-dasharray: 223;
+  stroke-dashoffset: 223;
+  animation: line-anim 2s ease forwards 0.4s;
+}
+#entry path:nth-child(4){
+  stroke-dasharray: 434;
+  stroke-dashoffset: 434;
+  animation: line-anim 2s ease forwards 0.6s;
+}
+#entry path:nth-child(5){
+  stroke-dasharray: 254;
+  stroke-dashoffset: 254;
+  animation: line-anim 2s ease forwards 0.8s;
+}
+#entry path:nth-child(6){
+  stroke-dasharray: 435;
+  stroke-dashoffset: 435;
+  animation: line-anim 2s ease forwards 1s;
+}
+#entry path:nth-child(7){
+  stroke-dasharray: 304;
+  stroke-dashoffset: 304;
+  animation: line-anim 2s ease forwards 1.2s;
+}
+#entry path:nth-child(8){
+  stroke-dasharray: 292;
+  stroke-dashoffset: 292;
+  animation: line-anim 2s ease forwards 1.4s;
+}
+#entry path:nth-child(9){
+  stroke-dasharray: 241;
+  stroke-dashoffset: 241;
+  animation: line-anim 2s ease forwards 1.6s;
+}
+
+#entry path:nth-child(10){
+  stroke-dasharray: 481;
+  stroke-dashoffset: 481;
+  animation: line-anim 2s ease forwards 1.8s;
+}
+#entry path:nth-child(11){
+  stroke-dasharray: 356;
+  stroke-dashoffset: 356;
+  animation: line-anim 2s ease forwards 2s;
+}
+#entry path:nth-child(12){
+  stroke-dasharray: 304;
+  stroke-dashoffset: 304;
+  animation: line-anim 2s ease forwards 2.2s;
+}
+#entry path:nth-child(13){
+  stroke-dasharray: 234;
+  stroke-dashoffset: 234;
+  animation: line-anim 2s ease forwards 2.4s;
+}
+#entry path:nth-child(14){
+  stroke-dasharray: 465;
+  stroke-dashoffset: 465;
+  animation: line-anim 2s ease forwards 2.6s;
+}
+#entry path:nth-child(15){
+  stroke-dasharray: 435;
+  stroke-dashoffset: 435;
+  animation: line-anim 2s ease forwards 2.8s;
+}
+#entry path:nth-child(16){
+  stroke-dasharray: 304;
+  stroke-dashoffset: 304;
+  animation: line-anim 2s ease forwards 3s;
+}
+#entry path:nth-child(17){
+  stroke-dasharray: 288;
+  stroke-dashoffset: 288;
+  animation: line-anim 2s ease forwards 3.2s;
+}
+#entry path:nth-child(18){
+  stroke-dasharray: 304;
+  stroke-dashoffset: 304;
+  animation: line-anim 2s ease forwards 3.4s;
+}
+#entry path:nth-child(19){
+  stroke-dasharray: 228;
+  stroke-dashoffset: 228;
+  animation: line-anim 2s ease forwards 3.6s;
+}
+#entry path:nth-child(20){
+  stroke-dasharray: 292;
+  stroke-dashoffset: 292;
+  animation: line-anim 2s ease forwards 3.8s;
+}
+#entry path:nth-child(21){
+  stroke-dasharray: 394;
+  stroke-dashoffset: 394;
+  animation: line-anim 2s ease forwards 4s;
+}
+#entry path:nth-child(22){
+  stroke-dasharray: 304;
+  stroke-dashoffset: 304;
+  animation: line-anim 2s ease forwards 4.2s;
+}
+#entry path:nth-child(23){
+  stroke-dasharray: 234;
+  stroke-dashoffset: 234;
+  animation: line-anim 2s ease forwards 4.4s;
+}
+#entry path:nth-child(24){
+  stroke-dasharray: 67;
+  stroke-dashoffset: 67;
+  animation: line-anim 2s ease forwards 4.6s;
+}
+
+@keyframes line-anim{
+  to{
+      stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill{
+  0%{
+    fill: transparent;
+  }
+  100%{
+    fill: white;
+    stroke-dashoffset: 5000;
+  }
+}
+
+
+
+.headlines h1{
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Martel', serif;
+  text-align: center;
+  font-style: normal;
+  font-weight: 350;
+  font-size: 72px;
+  color: #ffffff;
 }
 
 .headlines h1 span{
@@ -719,10 +911,6 @@ figure{
     width: 55%;
   }
 
-  .headlines p{
-    padding: 0 15%;
-  }
-
   #text span{
     font-size: 28px;
   }
@@ -755,12 +943,8 @@ figure{
     display: none;
   }
 
-  .headlines h1{
-    font-size: 30px;
-  }
-
-  .headlines p{
-    padding: 0 10%;
+  #entry{
+    width: 80%;
   }
 
   .links{
@@ -880,15 +1064,6 @@ figure{
 
 @media screen and (max-width:630px){
 
-  .headlines h1{
-    font-size: 28px;
-  }
-
-  .headlines h1 span{
-    font-size: 28px;
-  }
-
-
   .row{
       display: inline-block;
   }
@@ -951,21 +1126,6 @@ figure{
 
 
 @media screen and (max-width:520px){
-
-    .headlines h1{
-      font-size: 24px;
-      margin-top: 6rem;
-    }
-
-    .headlines h1 span{
-      font-size: 24px;
-    }
-
-    .headlines p{
-      font-size: 14px;
-      padding: 0 18%;
-    }
-
     .scroll-down h2{
       font-size: 10px;
     }
@@ -975,7 +1135,7 @@ figure{
     }
 
     .all-links a{
-      font-size: 28px;
+      font-size: 72px;
     }
 
     #desc span{
@@ -991,7 +1151,7 @@ figure{
   @media screen and (max-width:470px){
 
     .all-links a{
-      font-size: 24px;
+      font-size: 64px;
     }
 
     .links{
@@ -1024,18 +1184,6 @@ figure{
   }
 
   @media screen and (max-width:400px){
-
-    .headlines h1{
-      font-size: 20px;
-    }
-
-    .headlines h1 span{
-      font-size: 20px;
-    }
-
-    .headlines p{
-      font-size: 13px;
-    }
 
     .links{
       width: 110%;;
@@ -1070,9 +1218,8 @@ figure{
   }
 
   @media screen and (max-width:350px){
-
     .all-links a{
-      font-size: 20px;
+      font-size: 56px;
     }
 
     .links a{
@@ -1120,35 +1267,6 @@ figure{
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-@keyframes line-anim{
-    to{
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes animate{
-    0%{
-        opacity: 0;
-        fill: none;
-        stroke-dashoffset: 1450;
-    }
-
-    30%{
-        opacity: 10;
-        fill: none;
-        stroke-dashoffset: 1450;
-    }
-
-    90%{
-        fill: rgba(34,34,34,0);
-    }
-
-    100%{
-        opacity: 10;
-        fill: rgba(34,34,34,1);
-        stroke-dashoffset: 0;
-    }
-}
 
 
 
