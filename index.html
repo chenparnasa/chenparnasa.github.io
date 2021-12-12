@@ -28,8 +28,8 @@
 <body>
 <div class="site-wrapper">
     <nav>
-        <!-- <img class="logo" src="img/logo.svg"> -->
-        <a class="logo" href="index">Chen Parnasa</a>
+        <a href="index"><img class="logo" src="img/logo white.svg"></a>
+        <!-- <a class="logo" href="index">Chen Parnasa</a> -->
 
         <ul class="nav-links">
             <!-- <div class="all-links">
@@ -42,7 +42,7 @@
             <div class="all-links">
                 <li><a href="index">Home.</a></li>
                 <li><a href="#projects">Projects.</a></li>
-                <li><a href="#">About.</a></li>
+                <li><a href="#about">About.</a></li>
             </div>
 
             <div class="links">
@@ -169,10 +169,27 @@
 
 <!------------------PROJECTS------------------>
 
+<div class="about" id="about">
+    <div class="about-wrapper">
+        <div class="about-text" data-aos="fade-right" data-aos-duration="1500">
+            <h1>Hi, I'm Chen.</h1><br>
+            <p>I'm a UX/UI Designer and Software Engineer. I hold a Bachelor of Science in software engineering from Azrieli college of engineering, as well as a course completion diploma in UX/UI from Codesigner.</p><br>
+            <p>I am detail-oriented, creative and highly motivated to come up with the best solution for every project. As a person who loves challenges and is constantly striving to improve, I am always eager to learn and to provide excellence in everything I do.</p>
+            <div class="about-links">
+                <li><a class="download-cv" href="file/Chen Parnasa - CV.pdf" target="_blank">Download CV</a></li>
+                <li><a class="linkedin" href="https://www.linkedin.com/in/chenparnasa/" target="_blank">Linkedin</a></li>
+                <li><a class="email" onclick="copyToClipboard('#mail')">Email</a></li>
+                <p id="mail">chenparnasa@gmail.com</p>
+            </div>
+        </div>
+        <img src="img/about.jpg" data-aos="fade-left" data-aos-duration="1500">
+    </div>
+</div>
 
-<footer>
+<footer id=black>
     <p>Designed & Developed by Chen Parnasa ©2021</p>
 </footer>
+
 
     <!--Link to JS files-->
     <script src="js/ScrollMagic.min.js"></script>
