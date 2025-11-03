@@ -165,24 +165,36 @@ function copyToClipboard(element) {
     }
   }
   
-  var defaultText,
-      substituteText,
-      btn;
   
-  /* Default text of the button */
-  defaultText = 'Email';
-  /* Alternate text for button */
-  substituteText = 'Copied!';
-  /* Grab our button */
-  btn = document.querySelector('.email');
-  
-  /* Add a listener to the button instance so we can manipulate it */
-  btn.addEventListener('click', function() {
-    changeText(this, defaultText, substituteText);
-  }, false);
-  
+var defaultText,
+    substituteText,
+    btn;
 
+/* Default text of the button */
+defaultText = 'Email';
+/* Alternate text for button */
+substituteText = 'Copied to clipboard';
+/* Grab our button */
+btn = document.querySelector('.email');
 
+/* Add a listener to the button instance so we can manipulate it */
+btn.addEventListener('click', function() {
+  changeText(this, defaultText, substituteText);
+  
+  // Change the text back to the default after 2 seconds
+  setTimeout(function() {
+    changeText(btn, substituteText, defaultText);  // Change text back to 'Email'
+  }, 2000);  // 2000ms = 2 seconds
+}, false);
+
+/* Function to change the text of the button */
+function changeText(button, oldText, newText) {
+  if (button.textContent === oldText) {
+    button.textContent = newText;
+  } else {
+    button.textContent = oldText;
+  }
+}
 
 
 /*

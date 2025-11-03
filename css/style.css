@@ -89,7 +89,7 @@
 
 .all-links{
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   text-align: center;
@@ -115,7 +115,7 @@
   border: none;
   overflow: hidden;
   outline: none;
-  padding-top: 5%;
+  padding-top: 2rem;
   list-style: none;
 }
 
@@ -124,7 +124,7 @@
   color: #ffffff;
   text-align: center;
   font-size: 14px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: normal;
 }
 
@@ -143,21 +143,6 @@
   margin-bottom: 5%;
 }
 
-/* .all-links a{
-  color: #131530;
-  text-decoration: none;
-  letter-spacing: 1px;
-  font-size: 32px;
-  font-weight: lighter;
-  font-family: 'Lora', serif;
-  cursor: pointer;
-} 
-
-.all-links a:hover{
-  transition: all 0.2s ease 0s;
-  color: #F67E7D;
-}*/
-
 .all-links a{
   color: #ffffff;
   text-decoration: none;
@@ -174,10 +159,11 @@
 }
 
 .all-links a:hover{
-  transition: all 0.3s ease;
+  transition: all 0.6s ease; 
   -webkit-text-fill-color: #ffffff;
   -webkit-text-stroke: unset;
 }
+
 
 .burger{
   display: block;
@@ -202,16 +188,6 @@
   cursor: pointer;
 } 
 
-/* .logo{
-  margin-right: auto;
-  color: #ffffff;
-  font-size: 18px;
-  font-family: 'Satisfy', cursive;
-  font-weight: normal;
-  opacity: 35%;
-  cursor: pointer;
-} */
-
   .link-grow{
     transform: scale(1.5);
     background: #EFEFEF;
@@ -233,12 +209,12 @@
   }
 
   #chameleon-navbar{
-    background-color: #f8df9c;
+    background-color: #EAEAEA;
     cursor: auto;
   }
 
-  #group-calendar-navbar{
-    background-color: #9dc4af;
+  #appwrite-navbar{
+    background-color: #19191C;
     cursor: auto;
   }
 
@@ -312,17 +288,6 @@ a {
 .headlines{
   align-items: center;
 }
-
-/* .headlines h1{
-  font-family: 'Martel', serif;
-  text-align: center;
-  font-style: normal;
-  font-weight: 350;
-  font-size: 36px;
-  margin-top: 8rem;
-  color: #131530;
-  padding: 0 3%;
-} */
 
 #entry{
   position: absolute;
@@ -495,7 +460,7 @@ a {
 }
 
 .headlines p{
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   text-align: center;
   font-style: normal;
   font-weight: lighter;
@@ -507,7 +472,7 @@ a {
 
 
 .headlines h2{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     text-align: center;
     font-style: normal;
     font-weight: 300;
@@ -569,31 +534,6 @@ figure{
   overflow: hidden;
 }
 
-/* #desc{
-  display: inline-block;
-  padding-top: 1.5%;
-  padding-bottom: 2%;
-}
-
-#desc span{
-  font-family: 'Lora', serif;
-  color: #222222;
-  margin-top: 40px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  letter-spacing: 0;
-}
-
-#desc h1{
-  padding: 0 10px;
-  font-family:'Poppins', sans-serif;
-  color: #222222;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  } */
-
 
 .image img{
   display: block;
@@ -615,18 +555,17 @@ figure{
 }
 
 .text-wrapper{
-  width: 40%;
+  width: 25%;
   position: relative;
   top: -90%;
   padding-left: 5%;
-  color: #ffffff;
 }
 
 .text-wrapper h2{
-  font-family:'Poppins', sans-serif;
+  font-family:'Inter', sans-serif;
   font-size: 14px;
   text-align: left;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   font-weight: normal;
   padding-bottom: 16px;
   text-transform: uppercase;
@@ -649,19 +588,20 @@ figure{
 }
 
 .text-wrapper h1{
-  font-family:'Poppins', sans-serif;
-  font-size: 36px;
+  font-family:'Inter', sans-serif;
+  font-size: 28px;
   text-align: left;
+  font-weight: 600;
   padding-bottom: 8px;
-  letter-spacing: 1px;
 }
 
 .text-wrapper h3{
-  font-family:'Poppins', sans-serif;
-  font-size: 18px;
+  font-family:'Inter', sans-serif;
+  font-size: 16px;
   text-align: left;
-  font-weight: lighter;
+  font-weight: normal;
   width: 100%;
+  color: #222222;
 }
 
   .column{
@@ -674,44 +614,50 @@ figure{
   }
   
   .row h1{
-    font-family:'Poppins', sans-serif;
+    font-family:'Inter', sans-serif;
     font-style: normal;
-    font-weight:bold;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 13px;
     line-height: 36px;
-    letter-spacing: 0.24em;
-    color: #222222;
-    padding-bottom: 8px;
+    color: #8D8D8D;
+    padding-bottom: 4px;
+    letter-spacing: 1px;
   }
 
   .row p {
-    font-family:'Poppins', sans-serif;
+    font-family:'Inter', sans-serif;
     font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    color: #8D8D8D;
+    font-weight: 300;
+    font-size: 18px;
+    color: #1d1d1d;
     letter-spacing: 0;
     padding-bottom: 8px;
   }
 
   .credits a{
-    font-family:'Poppins', sans-serif;
+    font-family:'Inter', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 14px;
     color: #222222;
     letter-spacing: 0;
-    padding-bottom: 8px;
+    cursor: pointer;
   }
 
   .credits a:hover{
-    color: #F95F51;
+    color: #0E7979;
   }
 
-  .the-idea, .introduction ,.credits{
+  .the-idea, .introduction, .credits{
     float: left;
     width: 50%;
     padding-top: 120px;
+  }
+
+  .credits p{
+    font-size: 14px;
+    font-weight: 500;
+    color: #8D8D8D;
   }
 
   .the-problem{
@@ -748,9 +694,9 @@ figure{
 
   h1 span{
     font-family: 'Lora', serif;
-    font-size: 36px;
+    font-size: 32px;
     letter-spacing: 0;
-    padding-right: 24px;
+    padding-right: 1rem;
   }
 
   .for-desktop #text{
@@ -796,10 +742,12 @@ figure{
     object-fit: cover; 
     cursor: auto;
   }
-
+  
   .cover-img #cover_tablet{
     display: none;
   }
+
+
 
   #next-project-mobile{
     display: none;
@@ -818,50 +766,26 @@ figure{
   }
 
   .detail h6{
-    font-family:'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     color: #8D8D8D;
-    letter-spacing: 4px;
+    padding-bottom: 0.25rem;
   }
 
   .detail h4{
     font-family: 'Lora', serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 20px;
     color: #222222;
     letter-spacing: 0;
   }
-  
-  /*.chameleon #cover, .avaken #cover, .vistore #cover, .group-calendar #cover{
-    align-items: center;
-    width: 100%;
-    height: 70vh;
-    object-fit: cover; 
-    cursor: auto;
-  }*/
-
-  /*.vistore #cover_tablet{
-    display: none;
-  }
-
-  .avaken #cover_tablet{
-    display: none;
-  }
-
-  .chameleon #cover_tablet{
-    display: none;
-  }
-
-  .group-calendar #cover_tablet{
-    display: none;
-  }*/
 
 
   h5{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     padding-top: 5%;
     letter-spacing: 8px;
     font-size: 48px;
@@ -925,35 +849,62 @@ figure{
   }
 
   .about-text{
-    color: white;
+    color: #dcdcdc;
     width: 50%;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     padding-top: 15%;
     padding-left: 8%;
   }
 
   .about-text h1{
-    color: #91C7B1;;
-    font-size: 14px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    color: #ffffff;;
+    font-size: 32px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .about-text h1 span{
+    padding-left: 0.5rem;
+  }
+
+  .wave {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
   }
 
   .about-text p{
-    font-size: 14px;
+    font-size: 16px;
     font-weight: lighter;
+  }
+
+  .about-text p span{
+    font-weight: 200;
+    color: #ffffff;
   }
 
 
  footer{
   width: 100%;
-  color: #000000; 
+  color: #1d1d1d; 
   float: none; 
-  padding-top: 10px; 
-  padding-bottom: 10px; 
+  padding-top: 1rem; 
+  padding-bottom: 1rem; 
   text-align: center;
-  font-size: 10px;
-  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
 }
 
 #black{
@@ -995,6 +946,10 @@ figure{
     width: 50%;
   }
 
+  .the-idea, .introduction ,.credits, .the-problem{
+    width: 100%;
+  }
+
 }
 
 @media screen and (max-width:770px){
@@ -1024,7 +979,7 @@ figure{
   }
 
   .row p {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .project-details{
@@ -1066,59 +1021,30 @@ figure{
     width: 60%;
   }
 
+  .text-wrapper{
+    width: 80%;
+  }
 
-  /*
-    .vistore #cover{
+  .about-wrapper{ 
+    flex-direction: column;
+  }
+
+  .about-wrapper img{ 
     display: none;
   }
 
-  .vistore #cover_tablet{
-    display: block;
-    align-items: center;
+  .about-text{
     width: 100%;
-    height: 100vh;
-    object-fit: cover; 
-    cursor: auto;
+    padding: 2rem;
   }
 
-  .avaken #cover{
-    display: none;
+  .about{
+    height: auto; 
   }
-
-  .avaken #cover_tablet{
-    display: block;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover; 
-    cursor: auto;
+    
+  .about-text h1{
+    font-size: 28px;
   }
-
-  .chameleon #cover{
-    display: none;
-  }
-
-  .chameleon #cover_tablet{
-    display: block;
-    align-items: center;
-    width: 100%;
-    height: 110vh;
-    object-fit: cover; 
-    cursor: auto;
-  }
-  
-  .group-calendar #cover{
-    display: none;
-  }
-
-  .group-calendar #cover_tablet{
-    display: block;
-    align-items: center;
-    width: 100%;
-    height: 110vh;
-    object-fit: cover; 
-    cursor: auto;
-  }*/
 
 }
 
@@ -1131,10 +1057,6 @@ figure{
 
   .links{
     width: 78%;
-  }
-
-  .the-idea, .introduction ,.credits, .the-problem{
-    width: 100%;
   }
 
   .original-screens, .problem-with-img{
@@ -1180,21 +1102,6 @@ figure{
     width: 65%;
   }
 
-  
-  .about-text h1{
-    font-size: 12px;
-  }
-
-  .about-text p{
-    font-size: 12px;
-  }
-
-  .about-links a{
-    font-size: 12px;
-  }
-
-  
-
 }
 
 
@@ -1214,27 +1121,6 @@ figure{
 
     #desc span{
       font-size: 16px;
-    }
-
-    .text-wrapper{
-      width: 80%;
-    }
-
-    .about-wrapper{ 
-      flex-direction: column;
-    }
-
-    .about-wrapper img{ 
-      width: 90%;
-    }
-
-    .about-text{
-      width: 100%;
-      padding: 8% 5% 3% 5%;
-    }
-
-    .about{
-      height: 120vh;
     }
   
   }
