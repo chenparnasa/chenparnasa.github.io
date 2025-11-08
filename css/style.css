@@ -607,11 +607,6 @@ figure{
   .column{
     display: inline-block;
   }
-
-  .row{
-    display: flex;
-    padding: 1% 10% 1% 10%;
-  }
   
   .row h1{
     font-family:'Inter', sans-serif;
@@ -729,41 +724,66 @@ figure{
     overflow: hidden;
   }*/
 
-  .cover-img{
-    flex-direction: column;
+  .cover-img {
     width: 100%;
+    aspect-ratio: 16 / 9;   /* keeps stable ratio */
+    max-height: 70vh; 
     overflow: hidden;
-  }
-
-  .cover-img #cover{
+    display: flex;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 70vh;
-    object-fit: cover; 
-    cursor: auto;
+    background-color: #000;
   }
   
-  .cover-img #cover_tablet{
-    display: none;
+  .cover-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
   }
-
-
+  
+  
+  @media (max-width: 768px) {
+    .cover-img {
+      aspect-ratio: 16 / 9;      /* keep aspect ratio */
+      width: 100%;
+      max-height: calc(100vw * 9 / 16); /* 16:9 height based on width */
+    }
+  }
+  
 
   #next-project-mobile{
     display: none;
   }
 
-  .project-details{
+  .project-details {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     padding-top: 20px;
+    gap: 20px;
   }
-
-  .detail{
-    width: auto;
+  
+  .project-details .detail {
+    flex: 1 1 20%;
+    max-width: 200px;
   }
+  
+  @media (max-width: 768px) {
+    .project-details {
+      justify-content: center;
+    }
+  
+    .project-details .detail {
+      flex: 1 1 45%;
+      max-width: none;
+    }
+  }
+  
+  
 
   .detail h6{
     font-family: 'Inter', sans-serif;
@@ -821,10 +841,88 @@ figure{
     width: 100%;
   }
 
-  #chameleon{
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
+
+/* ensure images used as covers fill their parent reliably */
+.cover {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;       /* fill and crop while keeping aspect ratio */
+  object-position: center; /* keep focal center */
+  -o-object-fit: cover;    /* older fallback prefix (rare) */
+  transition: transform .45s ease; /* smooth zoom/flip animations */
+}
+
+/* horizontal flip when needed */
+.flip-x {
+  transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+}
+
+/* subtle hover zoom if you keep the zoom wrapper */
+.zoom-in .cover:hover {
+  transform: scale(1.03);
+}
+
+/* utility: make an image slightly shorter than viewport when needed */
+.image--partial {
+  /* this rule is safe to add and only applies when you add the class in HTML */
+  min-height: 85vh; /* change 85 to whatever % you prefer */
+}
+
+/* mobile tweak: reduce perceived height a little for small screens */
+@media (max-width: 768px) {
+  .zoom-in .cover:hover {
+    transform: none; /* disable hover zoom on touch devices */
   }
+}
+
+/*
+.project-img-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  display: block;
+  border-radius: 8px;       
+  overflow: hidden;         
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.row img.project-img {
+  width: 100%;
+  max-width: none; 
+  border-radius: 0; 
+}*/
+
+.row {
+  display: flex;
+  flex-direction: column;
+  padding: 1% 10%; /* same padding as your text rows */
+  box-sizing: border-box;
+}
+
+.project-img-wrapper {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 30px 0; /* spacing above/below the image */
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: inherit;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.45s ease;
+}
+
 
   /*---------------------------------------*/
 
