@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chen Parnasa — Designing Appwrite's hosting platform from the ground up, turning complex backend infrastructure into a seamless deployment experience.">
+
+    <meta property="og:title" content="Appwrite Sites: Zero to One — Chen Parnasa">
+    <meta property="og:description" content="Designing Appwrite's hosting platform from the ground up, turning complex backend infrastructure into a seamless deployment experience.">
+    <meta property="og:image" content="assets/og-image.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chenparnasa.github.io/appwrite-sites.html">
+
+    <title>Chen Parnasa - Product Designer</title>
+    <link rel="icon" href="assets/Logo/logo - icon.svg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Martel:wght@400;700;900&family=Outfit:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+    <body id="top">
+        <div class="site-wrapper">
+            <nav data-include="shared/nav.html"></nav>
+        
+            <header class="project-hero">
+                <div class="container"> 
+                    <a href="index.html" class="back-link">
+                        <span class="arrow">←</span> Back to Work
+                    </a>
+                    
+                    <h1>Appwrite Sites: Zero to One</h1>
+                    <div class="project-description">
+                        <p>Designing Appwrite's hosting platform from the ground up, turning complex backend infrastructure into a <span class="highlight">seamless 3-click deployment experience</span> for web developers.</p> 
+                    </div>
+                </div>
+            </header>
+            
+            <main class="project-container">
+                <div class="container project-inner">
+                    <div class="project-toc">
+                        <ul>
+                            <li><a href="#context"><span class="num">01</span>Closing the Gap</a></li>
+                            <li><a href="#strategy"><span class="num">02</span>The Smart Default</a></li>
+                            <li><a href="#experience"><span class="num">03</span>Abstracting Complexity</a></li>
+                            <li><a href="#refined-dx"><span class="num">04</span>Always in the Loop</a></li>
+                            <li><a href="#creation"><span class="num">05</span>From Steps to Flow</a></li>
+                        </ul>
+                    </div>
+                
+                    <article class="project-content">
+                        <section id="context" class="project-section">
+                            <span class="section-label">01 // Context</span>
+                            <h2>Closing the Gap</h2>
+                            <div class="section-description">
+                                <p>Appwrite had the backend covered, but once developers were ready to ship, they had to leave the ecosystem to host their frontend.</p>
+                                <p>Sites was created to bridge this final gap, letting users host their applications without ever leaving Appwrite. My goal was to design a hosting workflow that eliminates context-switching and brings hosting into the same workflow.</p>
+                            </div>
+                            <div class="project-media full-width no-background">
+                                <div class="media-wrapper">
+                                  <img src="assets/Case Studies/Sites/before-after-diagram.webp" class="zoomable" alt="Diagram">
+                                </div>
+                                <!--<p class="media-caption">Appwrite Sites closes the final gap. Frontend hosting is now part of the ecosystem, eliminating context switching.</p>-->
+                              </div>
+                        </section>
+            
+                        <section id="strategy" class="project-section">
+                            <span class="section-label">02 // The Strategy</span>
+                            <h2>The Smart Default</h2>
+                            <div class="section-description">
+                                <p>The challenge was balancing instant deployment with the level of control experienced developers expect.</p>
+                                <p>Instead of simplifying the interface, we moved complexity into the system. Once a repository is selected, Appwrite scans it to detect the framework and automatically pre-fills the deployment configuration.
+                                    <br>Advanced settings remain available, but are surfaced only when needed.</p> 
+                                <p>The result is a deployment flow that goes from intent to production in three clicks without forcing upfront configuration decisions.</p> 
+                            </div>
+                            <div class="project-media full-width">
+                                <div class="media-wrapper">
+                                  <div class="video-container">
+                                    <video autoplay muted playsinline class="zoomable">
+                                      <source src="assets/Case Studies/Sites/sites-repo-detection.mp4" type="video/mp4">
+                                    </video>
+                                    <button class="replay-btn"></button>
+                                  </div>
+                                </div>
+                              </div>
+                        </section>
+            
+                        <section id="experience" class="project-section">
+                            <span class="section-label">03 // The Core Experience</span>
+                            <h2>Abstracting Complexity</h2>
+                            <div class="section-description">
+                                <p>The core experience is designed to feel immediate and effortless from the first interaction. After connecting to GitHub, repositories surface instantly and the deployment wizard arrives prefilled.</p>
+                                <p>For transparency, real-time build logs keep developers informed throughout. Advanced controls are there for those who need them, but the default experience stays fast and minimal.</p>
+                            </div>
+                            <div class="project-media full-width">
+                                <div class="media-wrapper">
+                                  <div class="video-container">
+                                    <video autoplay muted playsinline class="zoomable">
+                                      <source src="assets/Case Studies/Sites/sites-deployment-flow.mp4" type="video/mp4">
+                                    </video>
+                                    <button class="replay-btn"></button>
+                                  </div>
+                                </div>
+                              </div>
+                        </section>
+            
+                        <section id="refined-dx" class="project-section">
+                            <span class="section-label">04 // Refined DX</span>
+                            <h2>Always in the Loop</h2>
+                            <div class="section-description">
+                                <p>Deployment is not the end of the experience, but the start of an ongoing feedback loop.
+                                    The post-deployment experience was designed as a single operations layer for managing live systems, bringing together control, transparency, and observability in one unified interface.</p>
+                                <p>The Site Overview serves as a control center, consolidating deployment status, previews, domains, and recent activity in one place. Every git push triggers a visual update in the dashboard, reinforcing that the system is active, responsive, and reliable.</p> 
+                                <p>For deeper inspection, deployment history, domain configuration, and live logs are accessible directly within the platform, providing full visibility without requiring context switching.</p>     
+                            </div>
+                            <div class="project-media full-width">
+                                <div class="media-wrapper">
+                                  <img src="assets/Case Studies/Sites/site-overview.webp" class="zoomable" alt="Site Overview" loading="lazy">
+                                </div>
+                              </div>
+                        </section>
+            
+                        <section id="creation" class="project-section">
+                            <span class="section-label">05 // Seamless Creation</span>
+                            <h2>From Steps to Flow</h2>
+                            <div class="section-description">
+                                <p>Sites introduced a new layer to Appwrite. A dedicated hosting service for developers, fully integrated into the ecosystem. This was not just a new feature but a new product surface that expanded how developers interact with the platform.</p>
+                                <p>As this layer evolved, it influenced existing creation patterns across the console. Step-based wizards, originally designed for complex setups, began to feel misaligned with simpler and more modern workflows.</p>
+                                <p>We introduced a fieldset-based creation model that replaces linear steps with a single continuous interface. This allows users to configure and complete setup without fragmented progression while still maintaining structure and clarity.</p>
+                                <p>The result is a more unified product experience where the simplicity introduced by Sites extends beyond hosting into the core creation flows of the platform.</p>
+                            </div>
+                            <div class="project-media full-width no-background">
+                                <div class="media-wrapper">
+                                  <img src="assets/Case Studies/Sites/before-after-wizard.webp" class="zoomable" alt="Wizard">
+                                </div>
+                              </div>
+                        </section>
+                    </article>
+                </div>
+            </main>
+            
+            <footer class="project-footer">
+                <div class="next-step">
+                    <span class="next-up">Next Up</span>
+                    <a href="databases-spreadsheet.html" class="next-title">Databases: Spreadsheet</a>
+                </div>
+            </footer>
+        
+            <div data-include="shared/footer.html"></div>
+        </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true });</script>
+    <script src="js/include-nav.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/lightbox.js"></script>
+</body>
+</html>
