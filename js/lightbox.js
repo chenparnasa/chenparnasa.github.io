@@ -136,14 +136,18 @@
     buildThumbs();
     lb.classList.add('active');
     document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';    
     render(index);
-  }
+}
 
-  function close() {
+function close() {
     mediaWrap.querySelectorAll('video').forEach(v => v.pause());
     lb.classList.remove('active');
     document.body.style.overflow = '';
-  }
+    document.body.style.position = '';
+    document.body.style.width = '';
+}
 
   // ─── Init ─────────────────────────────────────────────────────────────
   document.addEventListener('DOMContentLoaded', () => {
