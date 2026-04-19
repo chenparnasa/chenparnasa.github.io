@@ -1,240 +1,233 @@
 //---------------- Mobile Nav ----------------//
-const navSlide = () =>{
+let mouseCursor = null;
+let cursorMoveBound = false;
+
+const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
-    const navLinks = document.querySelectorAll('.nav-links li');
+    const navLinks = document.querySelectorAll('.all-links li');
 
-    burger.addEventListener('click', ()=>{
-        //Toggle nav
+    if (!burger || !nav) return;
+
+    if (burger.dataset.bound === 'true') return;
+    burger.dataset.bound = 'true';
+
+    burger.addEventListener('click', () => {
         nav.classList.toggle('nav-active');
+        document.body.classList.toggle('menu-open');
 
-        //Animate links
-        navLinks.forEach((link, index)=>{
-            if(link.style.animation){
-                link.style.animation = ''
-            }
-            else{
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 1}s`;
+        navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+                link.style.animation = '';
+            } else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index * 0.1 + 0.2}s`;
             }
         });
 
-        //Burger animation
         burger.classList.toggle('toggle');
     });
+};
 
-    burger.addEventListener('mouseleave', ()=>{
-        mouseCursor.classList.remove("link-grow");
-    });
-    burger.addEventListener('mouseover', ()=>{
-        mouseCursor.classList.add("link-grow");
+//---------------- Active Link State ----------------//
+function setActiveNavLink() {
+    const currentPath = window.location.pathname.split("/").pop();
+    const currentPage = (currentPath === "" || currentPath === "index.html") ? "index.html" : currentPath;
+
+    const navLinks = document.querySelectorAll('.all-links a');
+
+    navLinks.forEach(link => {
+        const linkHref = link.getAttribute('href').split("/").pop();
+        if (linkHref === currentPage) {
+            link.classList.add('active');
+        }
     });
 }
 
-navSlide();
-//---------------- Mobile Nav ----------------//
+//---------------- Mouse Cursor & Parallax ----------------//
+function cursor(e) {
+    const blobWrapper = document.querySelector('.blob-wrapper');
+    if (blobWrapper) {
+        const x = (e.clientX - window.innerWidth / 2) / 1.2;
+        const y = (e.clientY - window.innerHeight / 2) / 1.2;
+        const rotate = (e.clientX - window.innerWidth / 2) * 0.02;
+        blobWrapper.style.transform = `translate3d(${x}px, ${y}px, 0) rotate(${rotate}deg)`;
+    }
 
-
-
-//---------------- Mouse Cursor ----------------//
-let mouseCursor = document.querySelector('.cursor');
-let navLinks = document.querySelectorAll('.nav-links li');
-let scrollDown = document.querySelectorAll('.scroll-down');
-let creditLinks = document.querySelectorAll('.credits a');
-/*var cursor = document.querySelector(".cursor");
-var cursor2 = document.querySelector(".cursor2");
-document.addEventListener("mousemove", function(e){
-    cursor.style.cssText = cursor2.style.cssText = "left: " +e.clientX + "px; top: " + e.clientY +"px;";
-});*/
-
-window.addEventListener('mousemove', cursor);
-
-function cursor(e){
-    mouseCursor.style.top = e.pageY + 'px';
-    mouseCursor.style.left = e.pageX + 'px';
+    const heroText = document.getElementById('hero-dynamic-text');
+    if (heroText) {
+        const tx = -(e.clientX - window.innerWidth / 2) / 60;
+        const ty = -(e.clientY - window.innerHeight / 2) / 60;
+        heroText.style.translate = `${tx}px ${ty}px`;
+    }
 }
 
-/*
-
-socialLinks.forEach((link)=>{
-    link.addEventListener('mouseleave', ()=>{
-        mouseCursor.classList.remove("link-grow");
+function bindCursorHover(elements) {
+    elements.forEach((link) => {
+        link.addEventListener('mouseleave', () => {
+            if (mouseCursor) mouseCursor.classList.remove('link-grow');
+        });
+        link.addEventListener('mouseover', () => {
+            if (mouseCursor) mouseCursor.classList.add('link-grow');
+        });
     });
-    link.addEventListener('mouseover', ()=>{
-        mouseCursor.classList.add("link-grow");
-    });
-});
-
-downloadCV.forEach((link)=>{
-    link.addEventListener('mouseleave', ()=>{
-        mouseCursor.classList.remove("link-grow");
-    });
-    link.addEventListener('mouseover', ()=>{
-        mouseCursor.classList.add("link-grow");
-    });
-});
-
-viewProject.forEach((link)=>{
-    link.addEventListener('mouseleave', ()=>{
-        mouseCursor.classList.remove("link-grow");
-    });
-    link.addEventListener('mouseover', ()=>{
-        mouseCursor.classList.add("link-grow");
-        
-    });
-});
-*/
-
-navLinks.forEach((link)=>{
-    link.addEventListener('mouseleave', ()=>{
-        mouseCursor.classList.remove("link-grow");
-    });
-    link.addEventListener('mouseover', ()=>{
-        mouseCursor.classList.add("link-grow");
-    });
-});
-
-scrollDown.forEach((link)=>{
-    link.addEventListener('mouseleave', ()=>{
-        mouseCursor.classList.remove("link-grow");
-    });
-    link.addEventListener('mouseover', ()=>{
-        mouseCursor.classList.add("link-grow");
-    });
-});
-
-creditLinks.forEach((link)=>{
-    link.addEventListener('mouseleave', ()=>{
-        mouseCursor.classList.remove("link-grow");
-    });
-    link.addEventListener('mouseover', ()=>{
-        mouseCursor.classList.add("link-grow");
-    });
-});
-
-
-
-//---------------- Mouse Cursor ----------------//
-
-// Copy email
-
-function copyToClipboard(element) {
-    var $temp = $("<input>");
-    $("body").append($temp);
-    $temp.val($(element).text()).select();
-    document.execCommand("copy");
-    $temp.remove();
 }
 
+//---------------- Email Utility ----------------//
+function initEmailButton() {
+    const emailBtn = document.querySelector('.email-trigger');
+    if (!emailBtn) return;
+    emailBtn.addEventListener('click', function() {
+        const email = this.getAttribute('data-email');
+        navigator.clipboard.writeText(email);
+        const original = this.textContent;
+        this.textContent = 'Copied';
+        setTimeout(() => this.textContent = original, 2000);
+    });
+}
 
+//---------------- Text Rotation (Hero Animation) ----------------//
+function initTextRotation() {
+    const heroElement = document.getElementById("hero-dynamic-text");
+    if (!heroElement) return;
 
+    const phrases = [
+      'End-to-end<br>product designer',
+      'Solving complex<br>problems',
+      'Building digital<br>solutions'
+    ];
 
-/**
- * Change the text of a button
- * @param {el} object HTMLElement: button to change text of
- * @param {dText} string: default text
- * @param {nText} string: new text
- **/
- function changeText(el, dText, nText) {
-    var content = '',
-        context = '';
-    
-    /**
-     * Set the text of a button
-     *     - dependant upon current text
-     **/
-    function setText() {
-      return (content === dText) ? nText : dText;
+    let currentIndex = 0;
+
+    function rotate() {
+        heroElement.animate([
+            { filter: 'blur(0px)', opacity: 1 },
+            { filter: 'blur(20px)', opacity: 0 },
+            { filter: 'blur(0px)', opacity: 1 }
+        ], {
+            duration: 1200,
+            easing: 'ease-in-out'
+        });
+
+        setTimeout(() => {
+            currentIndex = (currentIndex + 1) % phrases.length;
+            heroElement.innerHTML = phrases[currentIndex];
+        }, 600); 
     }
-    
-    /* Check to see if the browser accepts textContent */
-    if ('textContent' in document.body) {
-      context = 'textContent';
-      /* Get the current button text */
-      content = el[context];
-    /* Browser does NOT use textContent */
-    } else {
-      /* Get the button text with fallback option */
-      content = el.firstChild.nodeValue;
-    }
-    
-    /* Set button text */
-    if (context === 'textContent') {
-      el.textContent = setText();
-    } else {
-      el.firstChild.nodeValue = setText();
-    }
-  }
-  
-  
-var defaultText,
-    substituteText,
-    btn;
 
-/* Default text of the button */
-defaultText = 'Email';
-/* Alternate text for button */
-substituteText = 'Copied to clipboard';
-/* Grab our button */
-btn = document.querySelector('.email');
+    setInterval(rotate, 4500);
+}
 
-/* Add a listener to the button instance so we can manipulate it */
-btn.addEventListener('click', function() {
-  changeText(this, defaultText, substituteText);
-  
-  // Change the text back to the default after 2 seconds
-  setTimeout(function() {
-    changeText(btn, substituteText, defaultText);  // Change text back to 'Email'
-  }, 2000);  // 2000ms = 2 seconds
+//---------------- Back to Top ----------------//
+
+function initBackToTop() {
+    const btn = document.querySelector('.back-to-top');
+    if (!btn) return;
+
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.body.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+//---------------- Scroll Spy (Project TOC) ----------------//
+function initProjectTOC() {
+    const observerOptions = {
+        root: null,
+        rootMargin: '-20% 0px -70% 0px',
+        threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                document.querySelectorAll('.project-toc a').forEach(link => {
+                    link.classList.remove('active-link');
+                });
+                
+                const id = entry.target.getAttribute('id');
+                const activeLink = document.querySelector(`.project-toc a[href="#${id}"]`);
+                if (activeLink) activeLink.classList.add('active-link');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.project-section').forEach(section => {
+        observer.observe(section);
+    });
+
+    document.querySelectorAll('.project-toc a').forEach(link => {
+        link.addEventListener('click', function() {
+            document.querySelectorAll('.project-toc a').forEach(l => l.classList.remove('active-link'));
+            this.classList.add('active-link');
+        });
+    });
+}
+
+//---------------- Video Replay ----------------//
+function initVideoReplay() {
+    const videoWrappers = document.querySelectorAll('.video-container');
+
+    videoWrappers.forEach(wrapper => {
+        const video = wrapper.querySelector('video');
+        const btn = wrapper.querySelector('.replay-btn');
+
+        if (!video || !btn) return;
+
+        video.addEventListener('ended', () => {
+            btn.style.display = 'block';
+        });
+
+        btn.addEventListener('click', () => {
+            btn.style.display = 'none';
+            video.currentTime = 0;
+            video.play();
+        });
+    });
+}
+
+//---------------- Main Initialization ----------------//
+function initInteractions() {
+    mouseCursor = document.querySelector('.cursor');
+
+    if (!cursorMoveBound) {
+        window.addEventListener('mousemove', cursor);
+        cursorMoveBound = true;
+    }
+
+    const navLinksEls = document.querySelectorAll('.nav-links li');
+    const scrollDownEls = document.querySelectorAll('.scroll-down');
+    const creditLinksEls = document.querySelectorAll('.credits a');
+    const sideLinksEls = document.querySelectorAll('.side-link');
+
+    navSlide();
+    setActiveNavLink();
+    bindCursorHover(navLinksEls);
+    bindCursorHover(scrollDownEls);
+    bindCursorHover(creditLinksEls);
+    bindCursorHover(sideLinksEls);
+    
+    initEmailButton();
+    initTextRotation();
+    initBackToTop()
+    initProjectTOC();
+    initVideoReplay();
+}
+
+// Listen for fragment loading
+document.addEventListener('site:fragments-loaded', initInteractions);
+
+// Initial start
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initInteractions);
+} else {
+    initInteractions();
+}
+
+//---------------- Image Protection ----------------//
+document.addEventListener('contextmenu', e => {
+    if (e.target.tagName === 'IMG') e.preventDefault();
 }, false);
 
-/* Function to change the text of the button */
-function changeText(button, oldText, newText) {
-  if (button.textContent === oldText) {
-    button.textContent = newText;
-  } else {
-    button.textContent = oldText;
-  }
-}
-
-
-/*
-//---------------- Skills Bars ----------------//
-const htmlBar = document.querySelector('.bar-html')
-const cssBar = document.querySelector('.bar-css')
-const jsBar = document.querySelector('.bar-javascript')
-const javaBar = document.querySelector('.bar-java')
-const psBar = document.querySelector('.bar-photoshop')
-const aiBar = document.querySelector('.bar-illustrator')
-
-var t1 = new TimelineLite()
-
-t1.fromTo(htmlBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(90% - 6px)', ease: Power4.easeOut})
-.fromTo(cssBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(90% - 6px)', ease: Power4.easeOut})
-.fromTo(jsBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(80% - 6px)', ease: Power4.easeOut})
-.fromTo(javaBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(80% - 6px)', ease: Power4.easeOut})
-.fromTo(psBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(70% - 6px)', ease: Power4.easeOut})
-.fromTo(aiBar, .75, {width: 'calc(0% - 6px)'}, {width: 'calc(60% - 6px)', ease: Power4.easeOut})
-
-const controller = new ScrollMagic.Controller()
-const scene = new ScrollMagic.Scene({
-    triggerElement: '.about',
-    triggerHook: 0
-})
-.setTween(t1)
-.addTo(controller)
-
-//---------------- Skills Bars ----------------//
-
-
-function togglePopup1(){
-    document.getElementById("popup-1").classList.toggle("active");
-}
-
-function togglePopup2(){
-    document.getElementById("popup-2").classList.toggle("active");
-}
-
-function togglePopup3(){
-    document.getElementById("popup-3").classList.toggle("active");
-}
-*/
+document.addEventListener('dragstart', e => {
+    if (e.target.tagName === 'IMG') e.preventDefault();
+}, false);

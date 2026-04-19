@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chen Parnasa — Redesigning Appwrite's developer activation by addressing a significant drop-off before the first API call through tailored flows and interactive code snippets.">
+
+    <meta property="og:title" content="Activation: First Commit">
+    <meta property="og:description" content="Redesigning Appwrite's developer activation by addressing a significant drop-off before the first API call through tailored flows and interactive code snippets.">
+    <meta property="og:image" content="assets/og-image.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chenparnasa.github.io/developer-activation.html">
+
+    <title>Chen Parnasa - Product Designer</title>
+    <link rel="icon" href="assets/Logo/logo - icon.svg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Martel:wght@400;700;900&family=Outfit:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+    <body id="top">
+        <div class="site-wrapper">
+            <nav data-include="shared/nav.html"></nav>
+        
+            <header class="project-hero">
+                <div class="container"> 
+                    <a href="index.html" class="back-link">
+                        <span class="arrow">←</span> Back to Work
+                    </a>
+
+                    <h1>Activation: First Commit</h1>
+                    <div class="project-description">
+                        <p>Redesigning Appwrite's developer activation by embedding onboarding into the Project Overview, addressing a <span class="highlight">58% drop-off</span> before the first API call through tailored flows and interactive code snippets.</p> 
+                    </div>
+                </div>
+            </header>
+            
+            <main class="project-container">
+                <div class="container project-inner">
+                    <div class="project-toc">
+                        <ul>
+                            <li><a href="#context"><span class="num">01</span>The Activation Gap</a></li>
+                            <li><a href="#problem"><span class="num">02</span>The 58% Bottleneck</a></li>
+                            <li><a href="#strategy"><span class="num">03</span>Integrated, Not Isolated</a></li>
+                            <li><a href="#system"><span class="num">04</span>Multi-Path Activation</a></li>
+                            <li><a href="#refined-dx"><span class="num">05</span>Smart Snippets</a></li>
+                            <li><a href="#approach"><span class="num">06</span>Designing in Code</a></li>
+                        </ul>
+                    </div>
+                
+                    <article class="project-content">
+                        <section id="context" class="project-section">
+                            <span class="section-label">01 // Context</span>
+                            <h2>The Activation Gap</h2>
+                            <div class="section-description">
+                                <p>ppwrite is an open-source backend platform for developers. Despite multiple onboarding iterations, a significant drop-off remained before users reached their first API call, highlighting a gap between setup and real product interaction.</p>
+                                <p>This project re-examined activation as part of a broader console overhaul, introducing a more flexible, AI-enhanced design approach using Tailwind CSS.</p>
+                            </div>
+                            <div class="media-placeholder">Visual: Appwrite Console Overview</div>
+                        </section>
+            
+                        <section id="problem" class="project-section">
+                            <span class="section-label">02 // The Problem</span>
+                            <h2>The 58% Bottleneck</h2>
+                            <div class="section-description">
+                                <p>A 58% drop-off occurred at the core activation step, even after prior improvements. Research revealed that context switching was the primary source of friction.</p>
+                                <p>Developers repeatedly left the console to search for framework-specific setup guides, breaking momentum and preventing successful activation.</p>
+                            </div>
+                            <div class="media-placeholder">Visual: Drop-off Funnel Analysis (76% → 42%)</div>
+                        </section>
+            
+                        <section id="strategy" class="project-section">
+                            <span class="section-label">03 // The Strategy</span>
+                            <h2>Integrated, not Isolated</h2>
+                            <div class="section-description">
+                                <p>Existing onboarding relied on a separate dashboard, creating a disconnect between guidance and execution.</p>
+                                <p>I reframed onboarding as part of the core product experience by embedding it directly into the Project Overview. This kept developers in flow and reduced unnecessary context switching.</p>
+                            </div>
+                            <div class="media-placeholder">Visual: Side-by-Side (Old Hub vs. New Component)</div>
+                        </section>
+            
+                        <section id="system" class="project-section">
+                            <span class="section-label">04 // The System</span>
+                            <h2>Multi-Path Activation</h2>
+                            <div class="section-description">
+                                <p>Activation was redesigned as a flexible system embedded within the Project Overview.
+                                    Developers begin by selecting their platform such as Web, Flutter, or iOS, followed by a tailored path. A Starter Kit supports rapid exploration, while an Existing App path supports integration.</p>
+                                <p>Both paths converge into three milestone-driven steps: Connection, First User, and Data Seeding. This creates a clear progression toward meaningful product interaction.</p>
+                            </div>
+                            <div class="media-placeholder">Visual: Platform Selection & Path Choice UI</div>
+                        </section>
+            
+                        <section id="refined-dx" class="project-section">
+                            <span class="section-label">05 // Refined DX</span>
+                            <h2>Smart Snippets</h2>
+                            <div class="section-description">
+                                <p>Activation was defined not by setup completion, but by meaningful interaction with real data.
+                                    To support this, I introduced real-time feedback loops across each milestone to reinforce progress and maintain momentum.</p>
+                                <p>Smart code snippets with auto-filled credentials and inline editing enabled a seamless copy, paste, and run flow, reducing friction at critical moments.</p>
+                            </div>
+                            <div class="media-placeholder">Visual: Close-up of Interactive Code Snippets</div>
+                        </section>
+            
+                        <section id="approach" class="project-section">
+                            <span class="section-label">06 // Technical Approach</span>
+                            <h2>Designing in Code</h2>
+                            <div class="section-description">
+                                <p>I contributed directly to the production codebase using Tailwind CSS, working within the new design system introduced in the console overhaul.</p>
+                                <p>This enabled faster iteration and tighter feedback loops between design and engineering, while ensuring alignment with real product constraints.</p>
+                            </div>
+                            <div class="media-placeholder">Visual: Code Editor / Tailwind Implementation Preview</div>
+                        </section>
+                    </article>
+                </div>
+            </main>
+
+            <footer class="project-footer">
+                <div class="next-step">
+                    <span class="next-up">Next Up</span>
+                    <a href="databases-spreadsheet.html" class="next-title">Databases: Spreadsheet</a>
+                </div>
+            </footer>
+        
+            <div data-include="shared/footer.html"></div>
+        </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true });</script>
+    <script src="js/include-nav.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

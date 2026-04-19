@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chen Parnasa — Transforming Appwrite's database table into a fully interactive spreadsheet, enabling inline editing and AI-assisted workflows.">
+
+    <meta property="og:title" content="Databases: Spreadsheet — Chen Parnasa">
+    <meta property="og:description" content="Transforming Appwrite's database table into a fully interactive spreadsheet, enabling inline editing and AI-assisted workflows.">
+    <meta property="og:image" content="assets/og-image.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chenparnasa.github.io/databases-spreadsheet.html">
+
+    <title>Chen Parnasa - Product Designer</title>
+    <link rel="icon" href="assets/Logo/logo - icon.svg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Martel:wght@400;700;900&family=Outfit:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+    <body id="top">
+        <div class="site-wrapper">
+            <nav data-include="shared/nav.html"></nav>
+        
+            <header class="project-hero">
+                <div class="container"> 
+                    <a href="index.html" class="back-link">
+                        <span class="arrow">←</span> Back to Work
+                    </a>
+
+                    <h1>Databases: Spreadsheet</h1>
+                    <div class="project-description">
+                        <p>Transforming Appwrite's database table into a <span class="highlight">fully interactive spreadsheet,</span> enabling inline editing, schema creation, and AI-assisted workflows.</p> 
+                    </div>
+                </div>
+            </header>
+            
+            <main class="project-container">
+                <div class="container project-inner">
+                    <div class="project-toc">
+                        <ul>
+                            <li><a href="#context"><span class="num">01</span>System Mismatch</a></li>
+                            <li><a href="#problem"><span class="num">02</span>Static Interaction</a></li>
+                            <li><a href="#mental-model"><span class="num">03</span>Spreadsheet Interface</a></li>
+                            <li><a href="#interaction"><span class="num">04</span>Keyboard Workflow</a></li>
+                            <li><a href="#enhancement"><span class="num">05</span>AI Schema Assist</a></li>
+                        </ul>
+                    </div>
+                
+                    <article class="project-content">
+                        <section id="context" class="project-section">
+                            <span class="section-label">01 // Context</span>
+                            <h2>System Mismatch</h2>
+                            <div class="section-description">
+                                <p>Appwrite's database layer used document database terminology while relying on a table-based structure under the hood. This created a gap between how data was described and how it actually behaved.</p>
+                                <p>Collections, Documents, and Attributes shaped the mental model, but did not fully reflect the underlying structure of the system.</p> 
+                            </div>
+                            <div class="project-media full-width no-background">
+                                <div class="media-wrapper">
+                                  <img src="assets/Case Studies/Databases/before-after-diagram.webp" class="zoomable" alt="Diagram">
+                                </div>
+                                <!--<p class="media-caption">Appwrite Sites closes the final gap. Frontend hosting is now part of the ecosystem, eliminating context switching.</p>-->
+                              </div>
+                        </section>
+                    
+                        <section id="problem" class="project-section">
+                            <span class="section-label">02 // The Problem</span>
+                            <h2>Static Interaction</h2>
+                            <div class="section-description">
+                                <p>The table interface functioned as a static structure rather than a live workspace. To modify data, users had to leave the table and navigate to a separate document view.</p>
+                                <p>This created a break in context between viewing and editing, making even simple updates feel indirect and fragmented.</p>
+                            </div>
+                            <div class="project-media full-width">
+                                <div class="media-wrapper">
+                                  <img src="assets/Case Studies/Databases/documents-overview.webp" class="zoomable" alt="Documents Overview" loading="lazy">
+                                </div>
+                              </div>
+                        </section>
+                    
+                        <section id="mental-model" class="project-section">
+                            <span class="section-label">03 // Mental Model</span>
+                            <h2>Spreadsheet Interface</h2>
+                            <div class="section-description">
+                                <p>We introduced a spreadsheet-based model for interacting with database content, rethinking tables as a live, editable workspace rather than a static structure.</p>
+                                <p>Structured data is managed in a full-width spreadsheet with rows and columns, enabling fast inline editing and seamless record creation.</p>
+                                <div class="project-media full-width">
+                                    <div class="media-wrapper">
+                                      <div class="video-container">
+                                        <video autoplay loop muted playsinline class="zoomable">
+                                            <source src="assets/Case Studies/Databases/spreadsheet-edit-row.mp4" type="video/mp4">
+                                        </video>
+                                      </div>
+                                    </div>
+                                  </div>
+                                <p>Flexible data is managed in a split view combining a spreadsheet interface with a JSON editor, where the spreadsheet exposes key fields and the JSON editor provides full document-level access.</p>
+                                <div class="project-media full-width">
+                                    <div class="media-wrapper">
+                                      <div class="video-container">
+                                        <video autoplay loop muted playsinline class="zoomable">
+                                            <source src="assets/Case Studies/Databases/databases-edit-document.mp4" type="video/mp4">
+                                        </video>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </section>
+                    
+                        <section id="interaction" class="project-section">
+                            <span class="section-label">04 // Interaction</span>
+                            <h2>Keyboard Workflow</h2>
+                            <div class="section-description">
+                                <p>We designed a keyboard-first experience that prioritizes speed and efficiency when working with data. Users can navigate between fields, open records, and edit content without relying on the mouse.</p>
+                                <p>This approach makes working with large datasets faster and more fluid, reducing friction in common database operations.</p>
+                                <p>In the JSON editor, shortcuts and structural suggestions help users complete and extend schemas more efficiently, keeping both speed and control at the core of the experience.</p>
+                            </div>
+                            <div class="project-media full-width">
+                                <div class="media-wrapper">
+                                  <div class="video-container">
+                                    <video autoplay loop muted playsinline class="zoomable">
+                                        <source src="assets/Case Studies/Databases/databases-shortcut.mp4" type="video/mp4">
+                                    </video>
+                                  </div>
+                                </div>
+                              </div>
+                        </section>
+                    
+                        <section id="enhancement" class="project-section">
+                            <span class="section-label">05 // Enhancement</span>
+                            <h2>AI Schema Assist</h2>
+                            <div class="section-description">
+                                <p>We introduced AI-assisted schema generation to accelerate the process of structuring data within the spreadsheet model.</p>
+                                <p>Based on table context and naming, the system suggests relevant columns, helping users quickly move from an empty dataset to a structured and usable database.</p>
+                                <p>This reduces the manual effort required to define schemas, while keeping full control in the hands of the developer.</p>
+                            </div>
+                            <div class="project-media full-width dark">
+                                <div class="media-wrapper">
+                                  <div class="video-container">
+                                    <video autoplay muted playsinline class="zoomable">
+                                      <source src="assets/Case Studies/Databases/databases-ai.mp4" type="video/mp4">
+                                    </video>
+                                    <button class="replay-btn"></button>
+                                  </div>
+                                </div>
+                              </div>
+                        </section>
+                    </article>
+                </div>
+            </main>
+            
+            <footer class="project-footer">
+                <div class="next-step">
+                    <span class="next-up">Next Up</span>
+                    <a href="appwrite-sites.html" class="next-title">Appwrite Sites: Zero to One</a>
+                </div>
+            </footer>
+        
+            <div data-include="shared/footer.html"></div>
+        </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true });</script>
+    <script src="js/include-nav.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/lightbox.js"></script>
+</body>
+</html>
