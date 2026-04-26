@@ -117,6 +117,22 @@ function initTextRotation() {
     setInterval(rotate, 4500);
 }
 
+//---------------- Lottie Lazy Load ----------------//
+window.addEventListener('load', () => {
+    setTimeout(() => {
+      const script = document.createElement('script');
+      script.src = 'https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js';
+      document.body.appendChild(script);
+  
+      script.onload = () => {
+        const player = document.getElementById('sites-anim');
+        player.addEventListener('mouseenter', () => player.play());
+        player.addEventListener('mouseleave', () => player.stop());
+      };
+  
+    }, 3000);
+  });
+
 //---------------- Back to Top ----------------//
 
 function initBackToTop() {
