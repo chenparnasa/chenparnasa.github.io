@@ -61,11 +61,16 @@
       <main class="projects" id="work">
         <div class="container">
           <div class="projects-grid">
-      
+
             <article class="project-card">
               <a href="appwrite-sites.html" class="card-link">
                 <div class="card-image">
-                  <img src="assets/Work/sites-hero.webp" alt="Appwrite Sites: Zero to One">
+                  <lottie-player 
+                    id="sites-anim"
+                    src="assets/Work/sites-hero.json" 
+                    background="transparent" 
+                    speed="1">
+                  </lottie-player>
                 </div>
                 <div class="card-info">
                   <h3>Appwrite Sites: Zero to One</h3>
@@ -73,11 +78,17 @@
                 </div>
               </a>
             </article>
-      
+
             <article class="project-card">
               <a href="databases-spreadsheet.html" class="card-link">
                 <div class="card-image">
-                  <img src="assets/Work/databases-hero.webp" alt="Databases: Spreadsheet">
+                  <lottie-player 
+                    src="assets/Work/documents-overview.json" 
+                    background="transparent" 
+                    speed="1" 
+                    loop 
+                    autoplay>
+                  </lottie-player>
                 </div>
                 <div class="card-info">
                   <h3>Databases: Spreadsheet</h3>
@@ -85,16 +96,35 @@
                 </div>
               </a>
             </article>
-      
-            <article class="project-card coming-soon">
-              <div class="card-link">
-                <div class="card-image">
-                  <div class="coming-soon-inner">
-                    <h3>Activation: First Commit</h3>
-                    <span class="coming-soon-badge">Coming Soon</span>
+
+            <article class="project-card">
+                <div class="card-image" style="position: relative;">
+                  <img src="assets/Work/activation-hero.webp" alt="Activation: Embedded Path" style="filter: blur(3px);">
+                  <div style="
+                    position: absolute;
+                    inset: 0;
+                    background: rgba(0, 0, 0, 0.35);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  ">
+                    <span style="
+                      color: #fff;
+                      font-size: 0.85rem;
+                      font-weight: 600;
+                      letter-spacing: 0.12em;
+                      text-transform: uppercase;
+                      border: 1.5px solid rgba(255,255,255,0.6);
+                      padding: 6px 14px;
+                      border-radius: 4px;
+                    ">Coming Soon</span>
                   </div>
                 </div>
-              </div>
+                <div class="card-info">
+                  <h3>Activation: Embedded Path</h3>
+                  <p class="card-description">Redesigning developer activation by embedding onboarding into the Project Overview, creating a clear path to the first API call.</p>
+                </div>
+              </a>
             </article>
       
           </div>

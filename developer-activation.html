@@ -32,9 +32,9 @@
                         <span class="arrow">←</span> Back to Work
                     </a>
 
-                    <h1>Activation: First Commit</h1>
+                    <h1>Activation: Embedded Path</h1>
                     <div class="project-description">
-                        <p>Redesigning Appwrite's developer activation by embedding onboarding into the Project Overview, addressing a <span class="highlight">58% drop-off</span> before the first API call through tailored flows and interactive code snippets.</p> 
+                        <p>Redesigning Appwrite's developer activation by integrating onboarding into the Project Overview, targeting a <span class="highlight">58% drop-off</span> before the first API call through structured flows and interactive code snippets.</p> 
                     </div>
                 </div>
             </header>
@@ -45,8 +45,8 @@
                         <ul>
                             <li><a href="#context"><span class="num">01</span>The Activation Gap</a></li>
                             <li><a href="#problem"><span class="num">02</span>The 58% Bottleneck</a></li>
-                            <li><a href="#strategy"><span class="num">03</span>Integrated, Not Isolated</a></li>
-                            <li><a href="#system"><span class="num">04</span>Multi-Path Activation</a></li>
+                            <li><a href="#insight"><span class="num">03</span>Missing Path</a></li>
+                            <li><a href="#system"><span class="num">04</span>Activation System</a></li>
                             <li><a href="#refined-dx"><span class="num">05</span>Smart Snippets</a></li>
                             <li><a href="#approach"><span class="num">06</span>Designing in Code</a></li>
                         </ul>
@@ -57,50 +57,71 @@
                             <span class="section-label">01 // Context</span>
                             <h2>The Activation Gap</h2>
                             <div class="section-description">
-                                <p>ppwrite is an open-source backend platform for developers. Despite multiple onboarding iterations, a significant drop-off remained before users reached their first API call, highlighting a gap between setup and real product interaction.</p>
-                                <p>This project re-examined activation as part of a broader console overhaul, introducing a more flexible, AI-enhanced design approach using Tailwind CSS.</p>
+                                <p>Appwrite is a backend platform that helps developers build the behind-the-scenes parts of their apps, like user authentication and data storage.</p>
+                                <p>To get real value from the product, developers need to connect Appwrite to their app so it can power features like users and data in a real, working product.</p>
                             </div>
-                            <div class="media-placeholder">Visual: Appwrite Console Overview</div>
+                            <div class="project-media full-width no-background">
+                                <div class="media-wrapper">
+                                  <img src="assets/Case Studies/Activation/waiting-for-connection-diagram.webp" class="zoomable" alt="Diagram">
+                                </div>
+                            </div>
                         </section>
             
                         <section id="problem" class="project-section">
                             <span class="section-label">02 // The Problem</span>
                             <h2>The 58% Bottleneck</h2>
                             <div class="section-description">
-                                <p>A 58% drop-off occurred at the core activation step, even after prior improvements. Research revealed that context switching was the primary source of friction.</p>
-                                <p>Developers repeatedly left the console to search for framework-specific setup guides, breaking momentum and preventing successful activation.</p>
+                                <p>Despite prior improvements, a 58% drop-off persisted at the core activation step. Earlier efforts introduced Starter Kits and an Onboarding Hub to reduce context switching and guide developers through setup, increasing onboarding completion by 6%.</p>
+                                <p>Even with this improvement, many developers still skipped the connection step and moved ahead to actions they could take right away, like creating their first user or adding data to the database. This behavior was consistently observed in user interviews, pointing to a mismatch between the expected setup flow and how developers naturally explored the product.</p>
                             </div>
-                            <div class="media-placeholder">Visual: Drop-off Funnel Analysis (76% → 42%)</div>
+                            <div class="project-media full-width no-background">
+                                <div class="media-wrapper">
+                                  <img src="assets/Case Studies/Activation/analytics-diagram.webp" class="zoomable" alt="Diagram">
+                                </div>
+                            </div>
                         </section>
             
-                        <section id="strategy" class="project-section">
-                            <span class="section-label">03 // The Strategy</span>
-                            <h2>Integrated, not Isolated</h2>
+                        <section id="insight" class="project-section">
+                            <span class="section-label">03 // Insight</span>
+                            <h2>Missing Path</h2>
                             <div class="section-description">
-                                <p>Existing onboarding relied on a separate dashboard, creating a disconnect between guidance and execution.</p>
-                                <p>I reframed onboarding as part of the core product experience by embedding it directly into the Project Overview. This kept developers in flow and reduced unnecessary context switching.</p>
+                                <p>After project creation, onboarding existed as a separate surface that could be skipped or dismissed. Despite exploring the product, many developers never naturally reached platform connection.</p>
+                                <p>This revealed a broader pattern across the system. Value was gated by setup completion, setup required navigating complex technical steps, the flow was split between the console and external tools, and there was no clear guided path through the experience.</p>
+                                <p>Together, these issues showed that activation was not embedded in the product experience itself. Without a clear in-context path forward, onboarding became optional rather than directional, and the moment of real product value was easily missed.</p>
                             </div>
-                            <div class="media-placeholder">Visual: Side-by-Side (Old Hub vs. New Component)</div>
+                            <div class="project-media full-width no-background">
+                                <div class="media-wrapper">
+                                  <img src="assets/Case Studies/Activation/audit-insights.webp" class="zoomable" alt="Audit Insights">
+                                </div>
+                            </div>
                         </section>
             
                         <section id="system" class="project-section">
                             <span class="section-label">04 // The System</span>
-                            <h2>Multi-Path Activation</h2>
+                            <h2>Activation System</h2>
                             <div class="section-description">
-                                <p>Activation was redesigned as a flexible system embedded within the Project Overview.
-                                    Developers begin by selecting their platform such as Web, Flutter, or iOS, followed by a tailored path. A Starter Kit supports rapid exploration, while an Existing App path supports integration.</p>
-                                <p>Both paths converge into three milestone-driven steps: Connection, First User, and Data Seeding. This creates a clear progression toward meaningful product interaction.</p>
+                                <p>To embed onboarding into the core product experience, it was integrated directly into the Project Overview, creating a clear and continuous path forward. Users are guided through an onboarding component that offers two paths: Starter Kit or Existing App, followed by three core steps: Connection, First User, and Data Seeding.</p>
+                                <p>Below this component, the analytics section remains locked until all steps are completed. Once finished, it unlocks, reinforcing the relationship between setup and real product usage through actual data.</p>
+                                <p>The system remains flexible, allowing experienced users to dismiss the onboarding flow and move freely while still maintaining a clear guided path for first-time users.</p>
                             </div>
-                            <div class="media-placeholder">Visual: Platform Selection & Path Choice UI</div>
+                            <div class="project-media full-width dark">
+                                <div class="media-wrapper">
+                                  <div class="video-container">
+                                    <video autoplay muted playsinline class="zoomable">
+                                      <source src="assets/Case Studies/Activation/onboarding-component.mp4" type="video/mp4">
+                                    </video>
+                                    <button class="replay-btn"></button>
+                                  </div>
+                                </div>
+                              </div>
                         </section>
             
                         <section id="refined-dx" class="project-section">
                             <span class="section-label">05 // Refined DX</span>
                             <h2>Smart Snippets</h2>
                             <div class="section-description">
-                                <p>Activation was defined not by setup completion, but by meaningful interaction with real data.
-                                    To support this, I introduced real-time feedback loops across each milestone to reinforce progress and maintain momentum.</p>
-                                <p>Smart code snippets with auto-filled credentials and inline editing enabled a seamless copy, paste, and run flow, reducing friction at critical moments.</p>
+                                <p>With activation now structured as a guided flow, completing each step still required executing technical setup tasks. To reduce friction at these critical moments, code snippets were introduced directly within the onboarding experience.</p>
+                                <p>Snippets are pre-configured based on platform selection, with prefilled credentials and support for inline editing. Developers can copy code by line or as a full block and paste it directly into their codebase, making it easier to complete each step quickly and continue through the flow with minimal effort. As steps are completed, the console reflects progress in real time, reinforcing momentum and guiding users forward.</p>
                             </div>
                             <div class="media-placeholder">Visual: Close-up of Interactive Code Snippets</div>
                         </section>
@@ -109,10 +130,10 @@
                             <span class="section-label">06 // Technical Approach</span>
                             <h2>Designing in Code</h2>
                             <div class="section-description">
-                                <p>I contributed directly to the production codebase using Tailwind CSS, working within the new design system introduced in the console overhaul.</p>
-                                <p>This enabled faster iteration and tighter feedback loops between design and engineering, while ensuring alignment with real product constraints.</p>
+                                <p>This project was part of the console redesign. Rather than producing standalone prototypes, I contributed directly to the production codebase, designing through implementation and refining the experience in code.</p>
+                                <p>This approach accelerated the work, ensured alignment with real product constraints, and allowed design decisions to be validated in context as part of the actual system.</p>
                             </div>
-                            <div class="media-placeholder">Visual: Code Editor / Tailwind Implementation Preview</div>
+                            <!--<div class="media-placeholder">Visual: Code Editor / Tailwind Implementation Preview</div>-->
                         </section>
                     </article>
                 </div>
@@ -132,5 +153,6 @@
     <script>AOS.init({ once: true });</script>
     <script src="js/include-nav.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/lightbox.js"></script>
 </body>
 </html>
