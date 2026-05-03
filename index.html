@@ -65,6 +65,9 @@
             <article class="project-card">
               <a href="appwrite-sites.html" class="card-link">
                 <div class="card-image">
+                  <div class="lottie-placeholder" id="sites-placeholder">
+                    <img src="assets/Work/sites-hero.webp" />
+                  </div>
                   <lottie-player 
                     id="sites-anim"
                     src="assets/Work/sites-hero.json" 
@@ -80,49 +83,41 @@
             </article>
 
             <article class="project-card">
-              <a href="databases-spreadsheet.html" class="card-link">
-                <div class="card-image">
-                  <lottie-player 
-                    src="assets/Work/documents-overview.json" 
-                    background="transparent" 
-                    speed="1" 
-                    loop 
-                    autoplay>
-                  </lottie-player>
+              <a href="developer-activation.html" class="card-link">
+                <div class="card-image activation">
+                  <img src="assets/Work/activation-hero.webp" alt="Activation: Embedded Path">
                 </div>
                 <div class="card-info">
-                  <h3>Databases: Spreadsheet</h3>
-                  <p class="card-description">Transforming Appwrite's database table into a fully interactive spreadsheet, enabling inline editing and AI-assisted workflows.</p>
+                  <h3>Activation: Embedded Path</h3>
+                  <p class="card-description">Redesigning developer activation by embedding onboarding into the Project Overview, creating a clear path to the first API call.</p>
+                  <div class="card-badges">
+                    <span class="badge">Claude</span>
+                    <span class="badge">Cursor</span>
+                    <span class="badge">GitHub</span>
+                  </div>
                 </div>
               </a>
             </article>
 
             <article class="project-card">
-                <div class="card-image" style="position: relative;">
-                  <img src="assets/Work/activation-hero.webp" alt="Activation: Embedded Path" style="filter: blur(3px);">
-                  <div style="
-                    position: absolute;
-                    inset: 0;
-                    background: rgba(0, 0, 0, 0.35);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                  ">
-                    <span style="
-                      color: #fff;
-                      font-size: 0.85rem;
-                      font-weight: 600;
-                      letter-spacing: 0.12em;
-                      text-transform: uppercase;
-                      border: 1.5px solid rgba(255,255,255,0.6);
-                      padding: 6px 14px;
-                      border-radius: 4px;
-                    ">Coming Soon</span>
+              <a href="databases-spreadsheet.html" class="card-link">
+                <div class="card-image light">
+                  <div class="lottie-placeholder" id="db-placeholder">
+                    <img src="assets/Work/documents-overview.webp" />
                   </div>
+                  <lottie-player 
+                    id="db-anim"
+                    src="assets/Work/documents-overview.json" 
+                    background="transparent" 
+                    speed="1" 
+                    loop 
+                    autoplay
+                    style="display:none">
+                  </lottie-player>
                 </div>
                 <div class="card-info">
-                  <h3>Activation: Embedded Path</h3>
-                  <p class="card-description">Redesigning developer activation by embedding onboarding into the Project Overview, creating a clear path to the first API call.</p>
+                  <h3>Databases: Spreadsheet</h3>
+                  <p class="card-description">Transforming Appwrite's database table into a fully interactive spreadsheet, enabling inline editing and AI-assisted workflows.</p>
                 </div>
               </a>
             </article>
