@@ -104,17 +104,17 @@ function initTextRotation() {
             { filter: 'blur(20px)', opacity: 0 },
             { filter: 'blur(0px)', opacity: 1 }
         ], {
-            duration: 1200,
+            duration: 900,
             easing: 'ease-in-out'
         });
 
         setTimeout(() => {
             currentIndex = (currentIndex + 1) % phrases.length;
             heroElement.innerHTML = phrases[currentIndex];
-        }, 600); 
+        }, 450); 
     }
 
-    setInterval(rotate, 4500);
+    setInterval(rotate, 3500);
 }
 
 //---------------- Lottie Lazy Load ----------------//
@@ -125,9 +125,27 @@ window.addEventListener('load', () => {
       document.body.appendChild(script);
   
       script.onload = () => {
-        const player = document.getElementById('sites-anim');
-        player.addEventListener('mouseenter', () => player.play());
-        player.addEventListener('mouseleave', () => player.stop());
+        ['sites-anim'].forEach(id => {
+          const player = document.getElementById(id);
+          const placeholder = document.getElementById(id.replace('anim', 'placeholder').replace('sites-', 'sites-').replace('activ-', 'activation-'));
+          
+          player.addEventListener('ready', () => {
+            placeholder.style.display = 'none';
+            player.style.display = 'block';
+          });
+  
+          player.addEventListener('mouseenter', () => player.play());
+          player.addEventListener('mouseleave', () => player.stop());
+        });
+  
+        // Docs animation — autoplay, no interaction
+        const docsPlayer = document.getElementById('db-anim');
+        const docsPlaceholder = document.getElementById('db-placeholder');
+  
+        docsPlayer.addEventListener('ready', () => {
+          docsPlaceholder.style.display = 'none';
+          docsPlayer.style.display = 'block';
+        });
       };
   
     }, 3000);
